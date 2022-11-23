@@ -1,1 +1,38 @@
-.opinion {}
+.opinion {
+  .opinion-inner {
+    .opinion-head {
+      font-family: $bingbold;
+      font-size: 38px;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .op-box {
+      position: relative;
+      .op-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        .op-content-left {
+          @include op-content-box;
+          .op-content-txt {
+            @include op-content-txt;
+          }
+          .op-content-btn {
+            margin-bottom: 50px;
+            @include cs-op-btn;
+          }
+        }
+        .op-content-right {
+          @include op-content-box;
+          .op-content-txt {
+            @include op-content-txt;
+          }
+          .op-content-btn {
+            margin-bottom: 50px;
+            @include cs-op-btn;
+          }
+        }
+      }
+    }
+  }
+}
