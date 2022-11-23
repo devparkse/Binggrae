@@ -1,13 +1,16 @@
 .header {
+  width: 100%;
   height: 147px;
+  position: fixed;
+  z-index: 9999;
   .header-top {
-    width: 100%;
+    padding: 0 80px;
     border-bottom: 1px solid #e7e7e7;
     @at-root.header-top-menu {
-      float: right;
+      display: flex;
+      justify-content: flex-end;
       > li {
-        float: left;
-        margin: 0px 15px;
+        margin: 0px 10px;
         > a {
           font-size: 14px;
           color: #1b1b1b;
@@ -20,7 +23,7 @@
           content: "";
           position: absolute;
           top: 10px;
-          right: 94px;
+          right: 165px;
           display: block;
           width: 1px;
           height: 9px;
@@ -30,8 +33,9 @@
     }
   }
   .header-main {
-    padding: 40px 20px;
     width: 100%;
+    height: 115px;
+    padding: 40px 80px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -40,19 +44,55 @@
     }
     .nav {
       display: flex;
+      white-space: nowrap;
+
       @at-root.gnb {
+        position: relative;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
+        &:hover .depth2 {
+          visibility: visible !important;
+          opacity: 1 !important;
+        }
         > li {
-          padding: 45px 80px 0 0;
+          padding: 0 80px 0 0;
+          position: relative;
+          display: block;
+          margin-right: 5px;
+          &:hover > a {
+            color: orangered;
+            border-bottom: 2px solid orangered;
+          }
+          &:hover > a {
+            &::after {
+              content: "";
+              position: absolute;
+              top: 5px;
+              right: -9px;
+              width: 5px;
+              height: 5px;
+              background: orangered;
+              border-radius: 50%;
+            }
+          }
           > a {
             position: relative;
             display: block;
             font-size: 20px;
             color: #1b1b1b;
             padding-bottom: 40px;
+            transition: color 0.5s;
+            border-bottom: 2px solid transparent;
           }
           @at-root.depth2 {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            display: block;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 1s;
             > li {
               > a {
                 position: relative;
@@ -60,12 +100,33 @@
                 font-size: 18px;
                 padding: 7px 0;
                 text-align: left;
+                transition: color 0.5s;
+                &:hover {
+                  color: orangered;
+                }
               }
             }
           }
         }
-      }
-      .lang {
+        .lang {
+          position: relative;
+          padding-top: 10px;
+          margin-right: 40px;
+          .lang-kr {
+            font-size: 16px;
+            font-weight: 600;
+            .lang-kind {
+              position: absolute;
+              top: 40%;
+              left: 50%;
+              transform: translateX(-50%);
+              background: #fff;
+              border-radius: 20px;
+              padding: 10px 0;
+              box-shadow: 0px 3px 7px 0 rgb(0 0 0 / 5%);
+            }
+          }
+        }
       }
     }
   }

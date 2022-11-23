@@ -6,3 +6,8 @@
   letter-spacing: -1.6px;
   padding-bottom: 30px;
 }
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
