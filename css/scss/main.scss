@@ -1,8 +1,11 @@
 @charset "utf-8";
+/*폰트*/
+@import url("/font/font.css");
+/*변수*/
 @import "variables";
+/*mixin*/
 @import "mixin";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("font/font.css");
+/*리셋*/
 * {
   margin: 0;
   padding: 0;
@@ -18,21 +21,21 @@ li {
 }
 img {
   border: 0;
-  vertical-align: middle;
+  vertical-align: top;
 }
 html {
   font-size: 16px;
 }
 body {
-  font-family: "Poppins", "Noto Sans KR", "binggraeregular", sans-serif;
+  font-family: "Poppins", "Noto Sans KR", sans-serif;
+  line-height: 1.6;
   line-height: 30px;
   font-size: 14px;
+  font-style: normal;
   color: #1f1f1f;
-  font-weight: normal;
-  letter-spacing: 0;
-  word-break: break-all;
+  letter-spacing: -0.09em;
 }
-/* 공통 요소(클래스) */
+/* 공통 요소*/
 .clearfix::after {
   content: "";
   position: relative;
@@ -46,6 +49,9 @@ body {
   display: block;
   width: 100%;
   margin: 0 auto;
+}
+em {
+  font-style: normal;
 }
 /* 레이아웃 */
 .wrap {

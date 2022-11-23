@@ -1,1 +1,86 @@
-.cs {}
+.cs {
+  position: relative;
+  .cs-inner {
+    .cs-head {
+      font-family: $bing;
+      position: relative;
+      text-align: center;
+      font-size: 38px;
+    }
+    .cs-box {
+      .cs-content {
+        .content-email {
+          .email-txt {
+            > span {
+              @include cs-bigbox;
+            }
+            > p {
+              font-size: 16px;
+              line-height: 1.63;
+            }
+            .email-btn {
+            }
+          }
+        }
+        .content-tell {
+          .tell-txt {
+            > span:nth-child(1) {
+              @include cs-bigbox;
+            }
+            > span:nth-child(2) {
+              font-family: Poppins;
+              font-size: 46.5px;
+              line-height: 1;
+              font-weight: 600;
+              letter-spacing: -2.33px;
+              color: #303030;
+            }
+            > span:nth-child(3) {
+              font-size: 16px;
+              line-height: 1;
+              > em {
+                display: block;
+                color: #e0462e;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+      .cs-more {
+        .more-txt {
+          font-size: 23px;
+          font-family: $bingbold;
+          line-height: 1;
+          letter-spacing: -1.6px;
+        }
+        .more-btn {
+          font-size: 14px;
+          font-weight: 500;
+          letter-spacing: normal;
+        }
+      }
+      .qna {
+        position: relative;
+        .qna-wrap {
+          position: relative;
+          display: block;
+          .qna-list {
+            position: relative;
+            .qna-link {
+              > em {
+                font-family: $bing;
+                font-size: 16px;
+                line-height: 1.4;
+              }
+              > span {
+                font-size: 16px;
+                line-height: 1.4;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

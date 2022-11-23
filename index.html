@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="kr">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -39,8 +39,54 @@
     <!-- favicon -->
     <link
       rel="apple-touch-icon"
+      sizes="57x57"
+      href="images/icon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="images/icon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="images/icon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="images/icon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="images/icon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="images/icon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="images/icon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="images/icon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
       sizes="180x180"
-      href="images/icon/apple-touch-icon.png"
+      href="images/icon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="images/icon/android-icon-192x192.png"
     />
     <link
       rel="icon"
@@ -51,11 +97,21 @@
     <link
       rel="icon"
       type="image/png"
+      sizes="96x96"
+      href="images/icon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
       sizes="16x16"
       href="images/icon/favicon-16x16.png"
     />
-    <link rel="manifest" href="images/icon/site.webmanifest" />
-    <meta name="msapplication-TileColor" content="#da532c" />
+    <link rel="manifest" href="images/icon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="images/icon/ms-icon-144x144.png"
+    />
     <meta name="theme-color" content="#ffffff" />
     <!-- jQuery -->
     <script
@@ -68,6 +124,7 @@
     <![endif]-->
     <script src="js/prefixfree.min.js"></script>
     <script src="js/respond.min.js"></script>
+    <title>빙그레</title>
     <link rel="stylesheet" href="css/normalize.css" />
     <!-- fontello -->
     <link rel="stylesheet" href="css/fontello/css/fontello.css" />
@@ -79,9 +136,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css/main.css" />
-    <title>빙그레</title>
     <link rel="stylesheet" href="css/test.css" />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <!-- 고정메뉴 -->
@@ -99,13 +155,114 @@
       <!-- 비주얼 -->
       <section class="visual"></section>
       <!-- 제품 -->
-      <section class="product"></section>
+      <section class="product">
+        <div class="product-inner inner">
+          <h2>행복한 빙그레의 맛!</h2>
+          <ul class="product-list">
+            <li>
+              <img src="images/sec02_img01.png" />
+              <a href="#" class="product-name"><span>아이스크림</span></a>
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <!-- 좌우 슬라이드 이동 버튼 -->
+        <button class="product-prev">이전</button>
+        <button class="product-next">다음</button>
+      </section>
       <!-- 브랜드 -->
-      <section class="brand"></section>
+      <section class="brand">
+        <div class="brnad-inner inner"></div>
+      </section>
       <!-- cs -->
-      <section class="cs"></section>
+      <section class="cs">
+        <div class="cs-inner inner service-wrap">
+          <h2 class="cs-head">고객문의 및 불편사항</h2>
+          <div class="cs-box">
+            <div class="cs-content">
+              <div class="content-email">
+                <div class="email-txt">
+                  <span>이메일 상담</span>
+                  <p>
+                    빙그레에 궁금한 사항을 문의해 주세요<br />
+                    최대한 빠른 시일내에 친절하게 답변해드리겠습니다.
+                  </p>
+                </div>
+                <button class="email-btn">상담하기</button>
+              </div>
+              <a href="#" class="content-tell">
+                <p class="tell-txt">
+                  <span>전화 상담</span>
+                  <span>080.022.0056</span>
+                  <span>월~금(공휴일 제외) &nbsp;<em>09:00~1730</em></span>
+                </p>
+              </a>
+            </div>
+            <div class="cs-more">
+              <h3 class="more-txt">
+                자주 묻는 질문에 내용이 없을 경우, 이메일 및 전화 상담 바랍니다.
+              </h3>
+              <a href="#" class="more-btn">더보기</a>
+            </div>
+            <div class="qna">
+              <ul class="qna-wrap">
+                <li class="qna-list">
+                  <a href="#" class="qna-link">
+                    <em>Q.</em>
+                    <span>아이스크림에는 왜 유통기한이 없나요?</span>
+                    <div class="qna-icon"></div>
+                  </a>
+                </li>
+                <li class="qna-list">
+                  <a href="#" class="qna-link">
+                    <em>Q.</em>
+                    <span>유통기한 경과 제품, 빙그레에서 처리해주나요?</span>
+                    <div class="qna-icon"></div>
+                  </a>
+                </li>
+                <li class="qna-list">
+                  <a href="#" class="qna-link">
+                    <em>Q.</em>
+                    <span
+                      >제품 유통기한 뒤에 있는 알파벳 기호는 무엇인가요?</span
+                    >
+                    <div class="qna-icon"></div>
+                  </a>
+                </li>
+                <li class="qna-list">
+                  <a href="#" class="qna-link">
+                    <em>Q.</em>
+                    <span>빙그레 서체의 사용 범위를 알고 싶어요.</span>
+                    <div class="qna-icon"></div>
+                  </a>
+                </li>
+                <li class="qna-list">
+                  <a href="#" class="qna-link">
+                    <em>Q.</em>
+                    <span>유통기한과 소비기한의 차이점은 무엇인가요?</span>
+                    <div class="qna-icon"></div>
+                  </a>
+                </li>
+                <li class="qna-list">
+                  <a href="#" class="qna-link">
+                    <em>Q.</em>
+                    <span>소비기한은 언제부터 시행하나요?</span>
+                    <div class="qna-icon"></div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- 의견 -->
-      <section class="opinion"></section>
+      <section class="opinion">
+        <div class="opinion inner service-wrap"></div>
+      </section>
       <!-- 하단 -->
       <footer class="footer"></footer>
     </div>
