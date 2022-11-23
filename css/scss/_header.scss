@@ -30,9 +30,43 @@
     }
   }
   .header-main {
+    padding: 40px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
     .logo {
-      
-
+    }
+    .nav {
+      display: flex;
+      @at-root.gnb {
+        display: flex;
+        align-items: center;
+        > li {
+          padding: 45px 80px 0 0;
+          > a {
+            position: relative;
+            display: block;
+            font-size: 20px;
+            color: #1b1b1b;
+            padding-bottom: 40px;
+          }
+          @at-root.depth2 {
+            > li {
+              > a {
+                position: relative;
+                display: block;
+                font-size: 18px;
+                padding: 7px 0;
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+      .lang {
+      }
     }
   }
 }

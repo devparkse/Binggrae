@@ -100,7 +100,38 @@ em {
   background: #bbb;
 }
 
-/* 비주얼 */
+.header .header-main {
+  padding: 40px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+}
+.header .header-main .nav {
+  display: flex;
+}
+.gnb {
+  display: flex;
+  align-items: center;
+}
+.gnb > li {
+  padding: 45px 80px 0 0;
+}
+.gnb > li > a {
+  position: relative;
+  display: block;
+  font-size: 20px;
+  color: #1b1b1b;
+  padding-bottom: 40px;
+}
+.depth2 > li > a {
+  position: relative;
+  display: block;
+  font-size: 18px;
+  padding: 7px 0;
+  text-align: left;
+} /* 비주얼 */
 /* 제품 */
 /* 브랜드 */
 /* cs */
