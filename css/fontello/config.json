@@ -7,10 +7,10 @@
   "ascent": 850,
   "glyphs": [
     {
-      "uid": "a151e07df1262b33b210de5d956e4cc8",
-      "css": "menu-outline",
-      "code": 59392,
-      "src": "typicons"
+      "uid": "559647a6f430b3aeadbecd67194451dd",
+      "css": "menu",
+      "code": 61641,
+      "src": "fontawesome"
     }
   ]
 }
