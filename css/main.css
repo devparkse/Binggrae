@@ -61,7 +61,7 @@ em {
 }
 
 .service-wrap {
-  width: 1310px;
+  max-width: 1310px;
 }
 
 /* 레이아웃 */
@@ -70,6 +70,7 @@ em {
   display: block;
 }
 
+/*고정메뉴*/
 /* 상단 */
 .header {
   width: 100%;
@@ -114,6 +115,9 @@ em {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  position: relative;
+}
+.header .header-main .logo {
   position: relative;
 }
 .header .header-main .nav {
@@ -181,20 +185,25 @@ em {
 }
 
 .gnb .lang {
-  position: relative;
-  padding-top: 10px;
-  margin-right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 100px;
 }
-.gnb .lang .lang-kr {
+.gnb .lang .lang-basic {
   font-size: 16px;
   font-weight: 600;
+  letter-spacing: -0.5px;
 }
-.gnb .lang .lang-kr .lang-kind {
+.gnb .lang .lang-kind {
   position: absolute;
-  top: 40%;
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
+  display: block;
   background: #fff;
+  border: 1px solid #fff;
   border-radius: 20px;
   padding: 10px 0;
   box-shadow: 0px 3px 7px 0 rgba(0, 0, 0, 0.05);
@@ -204,8 +213,74 @@ em {
 .visual {
   position: relative;
   display: block;
-  height: 500px;
+  height: 964px;
   background: url("../../images/pc_section01_3.jpg") no-repeat;
+}
+.visual > img {
+  margin: 0 auto;
+  display: block;
+  padding-top: 180px;
+}
+.visual .search .search-bar {
+  width: 1020px;
+  height: 80px;
+  align-items: center;
+  background: #fff;
+  margin: 0 auto;
+  padding-left: 35px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.visual .search .search-bar > input {
+  width: 79%;
+  height: 100%;
+  padding-left: 30px;
+  font-size: 17px;
+  letter-spacing: -0.85px;
+  text-align: left;
+  border: none;
+  background: url("../../images/search_icon.png") no-repeat center left;
+}
+.visual .search .search-bar .search-button {
+  max-width: 180px;
+  cursor: pointer;
+  width: 22%;
+  height: 55px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: normal;
+  border-radius: 27.5px;
+  border: none;
+  box-shadow: inset 0px 5px 10px 0 rgba(53, 53, 53, 0.11);
+  background: #ed1c24;
+  text-transform: uppercase;
+}
+.visual .search .tag {
+  margin-top: 25px;
+}
+.visual .search .tag .tag-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.visual .search .tag .tag-name > li {
+  cursor: pointer;
+  height: 37px;
+  border: 1px solid #edecef;
+  border-radius: 18.5px;
+  padding: 0 35px;
+  margin: 0 4px;
+}
+.visual .search .tag .tag-name > li > a {
+  font-family: "Binggrae";
+  font-size: 12px;
+  color: #1f1f1f;
+  text-align: center;
+  line-height: 37px;
 }
 
 /* 제품 */
@@ -301,7 +376,8 @@ em {
 /* cs */
 .cs {
   position: relative;
-  margin-bottom: 140px;
+  margin: 0 25px;
+  padding-bottom: 140px;
 }
 .cs .cs-inner .cs-head {
   font-family: "Binggrae-Bold";
@@ -336,7 +412,7 @@ em {
   padding-left: 45px;
   padding-top: 55px;
 }
-.cs .cs-inner .cs-box .cs-content .cs-content-left .email-txt > span {
+.cs .cs-inner .cs-box .cs-content .cs-content-left .email-txt > .email-head {
   font-family: "Binggrae-Bold";
   font-size: 32px;
   line-height: 1;
@@ -349,6 +425,22 @@ em {
   font-size: 16px;
   line-height: 1.63;
   padding-bottom: 60px;
+}
+@media (max-width: 1024px) {
+  .cs .cs-inner .cs-box .cs-content .cs-content-left .email-txt > p {
+    padding-bottom: 20px !important;
+  }
+}
+.cs .cs-inner .cs-box .cs-content .cs-content-left .email-txt > p .email-p {
+  display: block;
+}
+@media (max-width: 1024px) {
+  .cs .cs-inner .cs-box .cs-content .cs-content-left .email-txt > p .email-p2 {
+    display: block;
+  }
+}
+.cs .cs-inner .cs-box .cs-content .cs-content-left .email-txt > p .email-btn {
+  display: block;
 }
 .cs .cs-inner .cs-box .cs-content .cs-content-left .email-txt .email-btn {
   display: block;
@@ -366,11 +458,19 @@ em {
   top: 0;
   left: 0;
   display: block;
-  background: #eef8fa url(../../images/m_sec04_backimg01.png) no-repeat right/cover;
   background-size: 100%;
   width: 100%;
   height: 325px;
   z-index: -1;
+  background: #eef8fa url(../../images/m_sec04_backimg01.png) no-repeat right/cover;
+}
+@media (max-width: 1024px) {
+  .cs .cs-inner .cs-box .cs-content .cs-content-left .email-txt::after {
+    content: "" !important;
+    position: absolute !important;
+    background-position: -60px 120px !important;
+    background-size: 120% !important;
+  }
 }
 .cs .cs-inner .cs-box .cs-content .cs-content-right {
   position: relative;
@@ -401,6 +501,12 @@ em {
   color: #303030;
   margin-bottom: 30px;
 }
+@media (max-width: 1024px) {
+  .cs .cs-inner .cs-box .cs-content .cs-content-right .tell-txt > span:nth-child(2) {
+    font-size: 40px !important;
+    margin-bottom: 10px !important;
+  }
+}
 .cs .cs-inner .cs-box .cs-content .cs-content-right .tell-txt > span:nth-child(3) {
   display: inline-block;
   font-size: 16px;
@@ -412,17 +518,25 @@ em {
   font-weight: 500;
   padding-left: 15px;
 }
-.cs .cs-inner .cs-box .cs-content .cs-content-right::after {
+.cs .cs-inner .cs-box .cs-content .cs-content-right .tell-txt::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   display: block;
-  background: #fdf3f2 url(../../images/m_sec04_backimg02.png) no-repeat right/cover;
   background-size: 100%;
   width: 100%;
   height: 325px;
   z-index: -1;
+  background: #fdf3f2 url(../../images/m_sec04_backimg02.png) no-repeat right/cover;
+}
+@media (max-width: 1024px) {
+  .cs .cs-inner .cs-box .cs-content .cs-content-right .tell-txt::after {
+    content: "" !important;
+    position: absolute !important;
+    background-position: -60px 120px !important;
+    background-size: 120% !important;
+  }
 }
 .cs .cs-inner .cs-box .cs-more {
   display: flex;
@@ -460,6 +574,11 @@ em {
   -moz-column-gap: 30px;
        column-gap: 30px;
   row-gap: 10px;
+}
+@media (max-width: 1280px) {
+  .cs .cs-inner .cs-box .qna .qna-wrap {
+    grid-template-columns: 1fr !important;
+  }
 }
 .cs .cs-inner .cs-box .qna .qna-wrap .qna-list {
   position: relative;
@@ -510,6 +629,11 @@ em {
 }
 
 /* 의견 */
+.opinion {
+  position: relative;
+  margin: 0 25px;
+}
+
 .opinion .opinion-inner .opinion-head {
   font-family: "Binggrae-Bold";
   font-size: 38px;

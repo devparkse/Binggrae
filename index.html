@@ -136,11 +136,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css/test.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <!-- 고정메뉴 -->
+
     <!-- 햄버거 -->
     <div class="wrap">
       <!-- 상단 -->
@@ -234,10 +234,12 @@
             </ul>
           </nav>
           <div class="lang">
-            <span class="lang-kr">
+            <a href="#" class="lang-basic">
               kr
-              <img src="images/lang_btn.png" alt="" />
-            </span>
+              <span>
+                <img src="images/lang_btn.png" alt="binggrae" class="lang-img";
+              </span>
+            </a>
             <ul class="lang-kind">
               <li><a href="#">kr</a></li>
               <li><a href="#">en</a></li>
@@ -247,14 +249,35 @@
         </div>
       </header>
       <!-- 비주얼 -->
-      <section class="visual inner"></section>
+      <section class="visual inner">
+        <img src="images/sec01_logo_3.png" alt="binggrae" />
+        <div class="search">
+          <div class="search-bar">
+            <input
+              type="text"
+              id="search_name"
+              placeholder="검색어를 입력해주세요"
+              onfocus="this.placeholder=''"
+              onblur="this.placeholder='검색어를 입력해주세요'"
+            />
+            <button class="search-button">search</button>
+          </div>
+          <div class="tag">
+            <ul class="tag-name">
+              <li><a href="#">#링키바</a></li>
+              <li><a href="#">#더단백</a></li>
+              <li><a href="#">#요플레 프로틴</a></li>
+              <li><a href="#">#바나나맛우유</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
       <!-- 제품 -->
       <section class="product">
         <div class="product-inner inner">
           <h2 class="product-title">행복한 빙그레의 맛!</h2>
           <div class="product-wrap">
             <button class="product-slide-prev">이전</button>
-
             <div class="product-box-slide">
               <div class="product-box">
                 <div class="product-box-img">
@@ -328,10 +351,14 @@
             <div class="cs-content">
               <a href="#" class="cs-content-left">
                 <div class="email-txt">
-                  <span>이메일 상담</span>
+                  <span class="email-head">이메일 상담</span>
                   <p>
-                    빙그레에 궁금한 사항을 문의해 주세요<br />
-                    최대한 빠른 시일내에 친절하게 답변해드리겠습니다.
+                    빙그레에 궁금한 사항을
+                    <span class="email-p2">문의해 주세요</span>
+                    <span class="email-p">
+                      <span class="email-p2">최대한 빠른 시일내에</span>
+                      친절하게 답변해드리겠습니다.
+                    </span>
                   </p>
                   <button class="email-btn">상담하기</button>
                 </div>
