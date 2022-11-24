@@ -140,9 +140,15 @@
   </head>
   <body>
     <!-- 고정메뉴 -->
+    <div class="fix-button">
+      <a href="#" class="fix-button-top">SHOP</a>
+      <button class="fix-button-bottom"></button>
+    </div>
     <!-- 햄버거 -->
+
     <div class="wrap">
       <!-- 상단 -->
+
       <header class="header inner">
         <div class="header-top">
           <ul class="header-top-menu">
@@ -232,64 +238,108 @@
               </li>
             </ul>
           </nav>
-          <div class="lang">
-            <span class="lang-kr">
-              kr
-              <img src="images/lang_btn.png" alt="" />
-            </span>
-            <ul class="lang-kind">
-              <li><a href="#">kr</a></li>
-              <li><a href="#">en</a></li>
-              <li><a href="#">cn</a></li>
-            </ul>
+          <div class="front-layer"></div>
+          <div class="hearder-main-right clearfix">
+            <div class="lang">
+              <a href="#">
+                <span>kr</span>
+                <img src="images/lang_btn.png" alt="binggrae"
+              /></a>
+              <ul class="lang-sort">
+                <li><a href="#">KR</a></li>
+                <li><a href="#">EN</a></li>
+                <li><a href="#">CN</a></li>
+              </ul>
+            </div>
+            <!-- 햄버거메뉴아이콘 -->
+            <span class="icon-menu"></span>
           </div>
         </div>
       </header>
       <!-- 비주얼 -->
-      <section class="visual inner"></section>
+      <section class="visual inner">
+        <img src="images/sec01_logo_3.png" alt="binggrae" />
+        <div class="search">
+          <div class="search-bar">
+            <input
+              type="text"
+              id="search_name"
+              placeholder="검색어를 입력해주세요"
+              onfocus="this.placeholder=''"
+              onblur="this.placeholder='검색어를 입력해주세요'"
+            />
+            <button class="search-button">search</button>
+          </div>
+          <div class="tag">
+            <ul class="tag-name">
+              <li><a href="#">#링키바</a></li>
+              <li><a href="#">#더단백</a></li>
+              <li><a href="#">#요플레 프로틴</a></li>
+              <li><a href="#">#바나나맛우유</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
       <!-- 제품 -->
       <section class="product">
         <div class="product-inner inner">
           <h2 class="product-title">행복한 빙그레의 맛!</h2>
           <div class="product-wrap">
             <button class="product-slide-prev">이전</button>
-
             <div class="product-box-slide">
               <div class="product-box">
                 <div class="product-box-img">
                   <img src="images/sec02_img01.png" alt="사진" />
                 </div>
-                <a href="#" class="product-txt"><span>아이스크림</span></a>
+                <a href="#" class="product-txt">
+                  <span>아이스크림</span>
+                  <span class="hover-txt">view more</span>
+                </a>
               </div>
               <div class="product-box">
                 <div class="product-box-img">
                   <img src="images/sec02_img02.png" alt="사진" />
                 </div>
-                <a href="#" class="product-txt"><span>우유/치즈</span></a>
+                <a href="#" class="product-txt">
+                  <span>우유/치즈</span>
+                  <span class="hover-txt">view more</span>
+                </a>
               </div>
               <div class="product-box">
                 <div class="product-box-img">
                   <img src="images/sec02_img03.png" alt="사진" />
                 </div>
-                <a href="#" class="product-txt"><span>발효유</span></a>
+                <a href="#" class="product-txt">
+                  <span>발효유</span>
+                  <span class="hover-txt">view more</span>
+                </a>
               </div>
               <div class="product-box">
                 <div class="product-box-img">
                   <img src="images/sec02_img04.png" alt="사진" />
                 </div>
-                <a href="#" class="product-txt"><span>커피</span></a>
+                <a href="#" class="product-txt">
+                  <span>커피</span>
+                  <span class="hover-txt">view more</span>
+                </a>
               </div>
               <div class="product-box">
                 <div class="product-box-img">
                   <img src="images/sec02_img06.png" alt="사진" />
                 </div>
-                <a href="#" class="product-txt"><span>주스</span></a>
+                <a href="#" class="product-txt">
+                  <span>주스</span>
+                  <span class="hover-txt">view more</span>
+                </a>
               </div>
               <div class="product-box">
                 <div class="product-box-img">
                   <img src="images/sec02_img05.png" alt="사진" />
                 </div>
-                <a href="#" class="product-txt"><span>음료</span></a>
+                <a href="#" class="product-txt">
+                  <span>음료</span>
+                  <span class="hover-txt">view more</span>
+                </a>
               </div>
             </div>
 
@@ -299,7 +349,107 @@
       </section>
       <!-- 브랜드 -->
       <section class="brand">
-        <div class="brnad-inner inner"></div>
+        <div class="brnad-inner inner">
+          <h2 class="brnad-title">brand shop</h2>
+          <div class="brand-wrap">
+            <button class="brand-slide-prev">이전</button>
+
+            <div class="brand-box-slide">
+              <div class="brand-box">
+                <div class="brand-box-img">
+                  <img src="images/sec02_logo01.png" alt="사진" />
+                </div>
+                <div class="hover-box">
+                  <div class="hover-box-img">
+                    <img src="images/sec02_logo01.png" alt="사진" />
+                  </div>
+                  <p>
+                    빙그레 건강 tft의 <br />
+                    단백질 전문 브랜드
+                  </p>
+                  <a href="#" class="hover-box-bt"><span>구입하기</span></a>
+                </div>
+              </div>
+              <div class="brand-box">
+                <div class="brand-box-img">
+                  <img src="images/sec02_logo02.png" alt="사진" />
+                </div>
+                <div class="hover-box">
+                  <div class="hover-box-img">
+                    <img src="images/sec02_logo02.png" alt="사진" />
+                  </div>
+                  <p>
+                    빙그레 건강 tft의 <br />
+                    단백질 전문 브랜드
+                  </p>
+                  <a href="#" class="hover-box-bt"><span>구입하기</span></a>
+                </div>
+              </div>
+              <div class="brand-box">
+                <div class="brand-box-img">
+                  <img src="images/sec02_logo03.png" alt="사진" />
+                </div>
+                <div class="hover-box">
+                  <div class="hover-box-img">
+                    <img src="images/sec02_logo03.png" alt="사진" />
+                  </div>
+                  <p>
+                    빙그레 건강 tft의 <br />
+                    단백질 전문 브랜드
+                  </p>
+                  <a href="#" class="hover-box-bt"><span>구입하기</span></a>
+                </div>
+              </div>
+              <div class="brand-box">
+                <div class="brand-box-img">
+                  <img src="images/sec02_logo04.png" alt="사진" />
+                </div>
+                <div class="hover-box">
+                  <div class="hover-box-img">
+                    <img src="images/sec02_logo04.png" alt="사진" />
+                  </div>
+                  <p>
+                    빙그레 건강 tft의 <br />
+                    단백질 전문 브랜드
+                  </p>
+                  <a href="#" class="hover-box-bt"><span>구입하기</span></a>
+                </div>
+              </div>
+              <div class="brand-box">
+                <div class="brand-box-img">
+                  <img src="images/sec02_logo05.png" alt="사진" />
+                </div>
+                <div class="hover-box">
+                  <div class="hover-box-img">
+                    <img src="images/sec02_logo05.png" alt="사진" />
+                  </div>
+                  <p>
+                    빙그레 건강 tft의 <br />
+                    단백질 전문 브랜드
+                  </p>
+                  <a href="#" class="hover-box-bt"><span>구입하기</span></a>
+                </div>
+              </div>
+              <div class="brand-box">
+                <div class="brand-box-img">
+                  <img src="images/sec02_logo06.png" alt="사진" />
+                </div>
+                <div class="hover-box">
+                  <div class="hover-box-img">
+                    <img src="images/sec02_logo06.png" alt="사진" />
+                  </div>
+                  <p>
+                    빙그레 건강 tft의 <br />
+                    단백질 전문 브랜드
+                  </p>
+                  <a href="#" class="hover-box-bt"><span>구입하기</span></a>
+                </div>
+              </div>
+            </div>
+
+            <button class="brand-slide-next">다음</button>
+          </div>
+        </div>
       </section>
       <!-- cs -->
       <section class="cs">

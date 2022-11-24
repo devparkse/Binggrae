@@ -1,7 +1,6 @@
 .product {
   .product-inner {
     width: 1650px;
-    height: 420px;
     .product-title {
       font-family: $bingbold;
       font-size: 38px;
@@ -13,7 +12,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 0;
+      padding: 20px 0 150px 0;
       .product-slide-prev {
         @include productBt;
         background: url(/images/prev_arrow.png) no-repeat;
@@ -27,6 +26,16 @@
           width: 242px;
           height: 297px;
           overflow: hidden;
+          transition: transform 1s ease;
+          &:hover {
+            transform: translateY(-5%);
+          }
+          &:hover .product-txt > span:nth-child(1) {
+            display: none;
+          }
+          &:hover .product-txt > span:nth-child(2) {
+            display: block;
+          }
           .product-box-img {
             width: 242px;
             height: 242px;
@@ -50,6 +59,15 @@
             border-radius: 21px;
             margin: 12px 0 0;
             cursor: pointer;
+          }
+          @at-root .hover-txt {
+            display: none;
+            border-radius: 21px;
+            color: #fff;
+            background: #ed1c24;
+            text-transform: uppercase;
+            font-size: 16px;
+            letter-spacing: 0.1px;
           }
         }
       }

@@ -1,6 +1,74 @@
 .visual {
   position: relative;
   display: block;
-  height: 500px;
+  height: 964px;
   background: url("../../images/pc_section01_3.jpg") no-repeat;
+
+  > img {
+    margin: 0 auto;
+    display: block;
+    padding-top: 180px;
+  }
+  .search {
+    .search-bar {
+      width: 1020px;
+      height: 80px;
+      align-items: center;
+      background: #fff;
+      margin: 0 auto;
+      padding-left: 35px;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+      border-radius: 40px;
+      @include flexCenter;
+      > input {
+        width: 79%;
+        height: 100%;
+        padding-left: 30px;
+        font-size: 17px;
+        letter-spacing: -0.85px;
+        text-align: left;
+        border: none;
+        background: url("../../images/search_icon.png") no-repeat center left;
+        &:focus {
+          outline: none;
+        }
+      }
+      .search-button {
+        max-width: 180px;
+        cursor: pointer;
+        width: 22%;
+        height: 55px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: normal;
+        border-radius: 27.5px;
+        border: none;
+        box-shadow: inset 0px 5px 10px 0 rgb(53 53 53 / 11%);
+        background: #ed1c24;
+        text-transform: uppercase;
+      }
+    }
+    .tag {
+      margin-top: 25px;
+      .tag-name {
+        @include flexCenter;
+        > li {
+          cursor: pointer;
+          height: 37px;
+          border: 1px solid #edecef;
+          border-radius: 18.5px;
+          padding: 0 35px;
+          margin: 0 4px;
+          > a {
+            font-family: $bing;
+            font-size: 12px;
+            color: #1f1f1f;
+            text-align: center;
+            line-height: 37px;
+          }
+        }
+      }
+    }
+  }
 }

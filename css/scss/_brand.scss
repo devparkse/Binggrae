@@ -1,1 +1,68 @@
-.brand {}
+.brand {
+  .brnad-inner {
+    width: 1650px;
+    .brnad-title {
+      height: 55px;
+      font-family: $bingbold;
+      font-size: 38px;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 55px;
+      margin-bottom: 20px;
+    }
+    .brand-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0 180px;
+      .brand-slide-prev {
+        @include brandBt;
+        background: url(/images/prev_arrow.png) no-repeat;
+      }
+      .brand-box-slide {
+        display: flex;
+        justify-content: space-between;
+        gap: 0 18px;
+      }
+      @at-root .brand-box {
+        width: 242px;
+        height: 250px;
+        border: 1px solid #edecef;
+        border-radius: 30px;
+        overflow: hidden;
+        transition: transform 1s ease;
+        &:hover {
+          transform: translateY(-5%);
+        }
+        .brand-box-img {
+          width: 242px;
+          height: 250px;
+          background: #fff;
+          position: relative;
+          img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+        .hover-box {
+          .hover-box-img {
+            img {
+              &::after {
+              }
+            }
+          }
+          p {
+          }
+          .hover-box-bt {
+          }
+        }
+      }
+      .brand-slide-next {
+        @include brandBt;
+        background: url(/images/next_arrow.png) no-repeat;
+      }
+    }
+  }
+}

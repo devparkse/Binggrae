@@ -7,9 +7,26 @@
   @content;
 }
 // brand: mixin
+
+// header
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// product: mixin
+
 @mixin productBt {
-  width: 10px;
-  height: 20px;
+  width: 8px;
+  height: 15px;
+  cursor: pointer;
+  border: 0;
+  font-size: 0;
+}
+// brand: mixin
+@mixin brandBt {
+  width: 8px;
+  height: 15px;
   cursor: pointer;
   border: 0;
   font-size: 0;
@@ -42,7 +59,6 @@
   letter-spacing: -1.6px;
   padding-bottom: 30px;
 }
-
 @mixin cs-content-bg {
   content: "";
   position: absolute;
@@ -61,11 +77,7 @@
   background-position: -60px 120px !important;
   background-size: 120% !important;
 }
-@mixin flexCenter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 // opinion
 @mixin op-content-box {
   border-radius: 30px;
