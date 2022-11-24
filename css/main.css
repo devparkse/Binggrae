@@ -399,41 +399,82 @@ em {
   background: #1b1b1b;
   padding: 40px 50px 30px;
 }
-.footer .footer-inner .f-main {
+.footer .footer-inner .f-top-wrap {
   display: grid;
   grid-template-areas: "left . right" "top . ." "bottom . .";
+  padding-bottom: 115px;
 }
-.footer .footer-inner .f-main img {
+.footer .footer-inner .f-top-wrap img {
   grid-area: left;
   padding-bottom: 30px;
 }
-.footer .footer-inner .f-main .f-sub {
+.footer .footer-inner .f-top-wrap .f-link {
   grid-area: right;
   justify-self: end;
 }
-.footer .footer-inner .f-main .f-sub .f-sub-list {
+.footer .footer-inner .f-top-wrap .f-link .f-link-list {
   float: left;
   padding-left: 20px;
 }
-.footer .footer-inner .f-main .f-sub .f-sub-list a {
+.footer .footer-inner .f-top-wrap .f-link .f-link-list a {
   color: rgba(255, 255, 255, 0.3);
 }
-.footer .footer-inner .f-main .f-p-top {
+.footer .footer-inner .f-top-wrap .f-p-top {
   font-size: 17px;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.7);
   grid-area: top;
   padding-bottom: 10px;
 }
-.footer .footer-inner .f-main .f-p-bot {
+.footer .footer-inner .f-top-wrap .f-p-bot {
   font-size: 17px;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.7);
   grid-area: bottom;
 }
-.footer .footer-inner .copy {
-  letter-spacing: -0.15px;
-  color: rgba(255, 255, 255, 0.2);
+.footer .footer-inner .f-bot-wrap {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+.footer .footer-inner .f-bot-wrap .f-icon .icon-list {
+  position: relative;
+  float: left;
+  width: 70px;
+  height: 70px;
+}
+.footer .footer-inner .f-bot-wrap .f-icon .icon-list a {
+  position: relative;
+  display: block;
+}
+.footer .footer-inner .f-bot-wrap .f-icon .icon-list a img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.footer .footer-inner .f-bot-wrap .f-icon .icon-list::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  background: #fff;
+}
+.footer .footer-inner .f-bot-wrap .f-sitelink {
+  background: #fff;
+}
+.footer .footer-inner .f-bot-wrap .f-mob-txt-wrap {
+  display: none;
+}
+@media (max-width: 767px) {
+  .footer .footer-inner .f-bot-wrap .f-mob-txt-wrap {
+    display: block;
+  }
+}
+.footer .footer-inner .f-bot-wrap .copy {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .header,

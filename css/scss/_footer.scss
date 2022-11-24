@@ -4,21 +4,21 @@
     width: 100%;
     background: #1b1b1b;
     padding: 40px 50px 30px;
-    .f-main {
+    .f-top-wrap {
       display: grid;
-
       grid-template-areas:
         "left . right"
         "top . ."
         "bottom . .";
+      padding-bottom: 115px;
       img {
         grid-area: left;
         padding-bottom: 30px;
       }
-      .f-sub {
+      .f-link {
         grid-area: right;
         justify-self: end;
-        .f-sub-list {
+        .f-link-list {
           float: left;
           padding-left: 20px;
           a {
@@ -36,11 +36,53 @@
         grid-area: bottom;
       }
     }
-    .f-icon-wrap {
-    }
-    .copy {
-      letter-spacing: -0.15px;
-      color: rgba(255, 255, 255, 0.2);
+    .f-bot-wrap {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      .f-icon {
+        .icon-list {
+          position: relative;
+          float: left;
+          width: 70px;
+          height: 70px;
+          a {
+            position: relative;
+            display: block;
+            img {
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 70px;
+            height: 70px;
+            border-radius: 100%;
+            background: #fff;
+          }
+        }
+      }
+      .f-sitelink {
+        background: #fff;
+      }
+      .f-mob-txt-wrap {
+        display: none;
+        @include mobile {
+          display: block;
+        }
+        .mob-txt-list {
+          a {
+          }
+        }
+      }
+      .copy {
+        color: rgba(255, 255, 255, 0.3);
+      }
     }
   }
 }
