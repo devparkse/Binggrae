@@ -4,6 +4,9 @@
     width: 100%;
     background: #1b1b1b;
     padding: 40px 50px 30px;
+    @include mobile {
+      padding: 30px 20px;
+    }
     .f-top-wrap {
       display: grid;
       grid-template-areas:
@@ -11,16 +14,38 @@
         "top . ."
         "bottom . .";
       padding-bottom: 115px;
+      @include mobile {
+        padding-bottom: 80px;
+      }
+      @include mobile {
+        grid-template-areas:
+          "right"
+          "left"
+          "top"
+          "bottom" !important;
+        justify-content: center !important;
+        justify-items: center;
+      }
       img {
         grid-area: left;
         padding-bottom: 30px;
+        @include mobile {
+          padding-bottom: 20px;
+        }
       }
       .f-link {
         grid-area: right;
         justify-self: end;
+        @include mobile {
+          justify-self: center;
+          padding-bottom: 45px;
+        }
         .f-link-list {
           float: left;
           padding-left: 20px;
+          &:nth-child(1) {
+            padding-left: 0;
+          }
           a {
             color: rgba(255, 255, 255, 0.3);
           }
@@ -30,58 +55,159 @@
         @include f-txt;
         grid-area: top;
         padding-bottom: 10px;
+        @include mobile {
+          padding-bottom: 0;
+          font-size: 14px;
+        }
       }
       .f-p-bot {
         @include f-txt;
         grid-area: bottom;
+        @include mobile {
+          font-size: 14px;
+        }
       }
     }
     .f-bot-wrap {
       display: grid;
-      grid-template-columns: 1fr 2fr 1fr;
-      .f-icon {
-        .icon-list {
-          position: relative;
-          float: left;
-          width: 70px;
-          height: 70px;
-          a {
-            position: relative;
+      grid-template-columns: 1fr 3fr 1fr;
+      @include mobile {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+      }
+      .copy {
+        color: rgba(255, 255, 255, 0.2);
+        align-self: center;
+        @include mobile {
+          grid-row: end;
+          display: flex;
+          justify-content: space-between;
+        }
+        .f-mob-txt-wrap {
+          display: none;
+          @include mobile {
             display: block;
-            img {
-              position: absolute;
-              left: 50%;
-              top: 50%;
-              transform: translate(-50%, -50%);
+          }
+          .f-mob-txt {
+            .mob-txt-list {
+              float: left;
+              position: relative;
+              &:nth-child(1) {
+                margin-right: 20px;
+              }
+              a {
+                color: rgba(255, 255, 255, 0.4);
+                font-size: 12px;
+                position: relative;
+              }
+              &:nth-of-type(1)::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: -12px;
+                display: block;
+                width: 1px;
+                height: 4px;
+                background-color: rgba(255, 255, 255, 0.2);
+              }
             }
           }
-          &::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
+        }
+      }
+      .f-icon {
+        justify-self: end;
+        padding-right: 60px;
+        @include media-870 {
+          padding-right: 0;
+        }
+        @include mobile {
+          justify-self: center;
+          padding-bottom: 10px;
+        }
+        .icon-list {
+          position: relative;
+          width: 70px;
+          height: 70px;
+          float: left;
+          margin-left: 15px;
+          @include media-775 {
+            margin-left: 10px;
+          }
+          @include mobile {
+            width: 45px;
+            height: 45px;
+            margin-left: 15px;
+          }
+          &:nth-child(1) {
+            margin-left: 0;
+          }
+          a {
+            position: relative;
             width: 70px;
             height: 70px;
             border-radius: 100%;
-            background: #fff;
+            display: block;
+            @include f-bg;
+            @include mobile {
+              width: 45px;
+              height: 45px;
+              margin-left: 15px;
+            }
+            img {
+              @include ab-center;
+              @include mobile {
+                width: 14px;
+              }
+            }
           }
         }
       }
-      .f-sitelink {
-        background: #fff;
-      }
-      .f-mob-txt-wrap {
-        display: none;
+      .f-sitemap {
+        justify-self: end;
+        position: relative;
+        width: 355px;
+        height: 70px;
+        border-radius: 35px;
+        padding-left: 20px;
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        align-items: center;
+        @include f-bg;
         @include mobile {
-          display: block;
+          width: 250px;
+          height: 45px;
+          justify-self: center;
         }
-        .mob-txt-list {
+        .f-sitemap-list {
           a {
+            position: relative;
+            .sitemap-list-icon {
+              @include mobile {
+                width: 32px;
+              }
+            }
+            span {
+              color: rgba(153, 153, 153, 0.67);
+              @include mobile {
+                font-size: 12px;
+              }
+              strong {
+                color: rgba(255, 255, 255, 0.67);
+              }
+            }
+            .sitemap-list-btn {
+              position: absolute;
+              top: 50%;
+              left: 30px;
+              transform: translateY(-50%) rotate(-90deg);
+              @include mobile {
+                width: 10px;
+                left: 17px;
+              }
+            }
           }
         }
-      }
-      .copy {
-        color: rgba(255, 255, 255, 0.3);
       }
     }
   }

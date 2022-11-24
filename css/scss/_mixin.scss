@@ -1,3 +1,11 @@
+// 공통요소
+@mixin ab-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  @content;
+}
 // brand: mixin
 @mixin productBt {
   width: 10px;
@@ -6,7 +14,6 @@
   border: 0;
   font-size: 0;
 }
-
 // cs: mixin
 @mixin cs-op-btn {
   border: 0;
@@ -53,12 +60,11 @@
   position: absolute !important;
   background-position: -60px 120px !important;
   background-size: 120% !important;
-
+}
 @mixin flexCenter {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 // opinion
 @mixin op-content-box {
@@ -78,6 +84,11 @@
   font-weight: 300;
   color: rgba(255, 255, 255, 0.7);
 }
+@mixin f-bg {
+  background: #1b1b1b;
+  box-shadow: 0px 4px 8px 1px rgb(0 0 0 / 36%),
+    inset 0px 4px 10.8px 2.2px rgb(73 73 73 / 11%);
+}
 // 반응형 mixin
 @mixin tablet1 {
   @media (max-width: 1280px) {
@@ -86,6 +97,16 @@
 }
 @mixin tablet2 {
   @media (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin media-870 {
+  @media (max-width: 870px) {
+    @content;
+  }
+}
+@mixin media-775 {
+  @media (max-width: 775px) {
     @content;
   }
 }
