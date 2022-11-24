@@ -61,7 +61,7 @@ em {
 }
 
 .service-wrap {
-  width: 1310px;
+  max-width: 1310px;
 }
 
 /* 레이아웃 */
@@ -70,6 +70,7 @@ em {
   display: block;
 }
 
+/*고정메뉴*/
 /* 상단 */
 .header {
   width: 100%;
@@ -281,7 +282,8 @@ em {
 /* cs */
 .cs {
   position: relative;
-  margin-bottom: 140px;
+  margin: 0 25px;
+  padding-bottom: 140px;
 }
 .cs .cs-inner .cs-head {
   font-family: "Binggrae-Bold";
@@ -316,7 +318,7 @@ em {
   padding-left: 45px;
   padding-top: 55px;
 }
-.cs .cs-inner .cs-box .cs-content .cs-content-left .email-txt > span {
+.cs .cs-inner .cs-box .cs-content .cs-content-left .email-txt > .email-head {
   font-family: "Binggrae-Bold";
   font-size: 32px;
   line-height: 1;
@@ -329,6 +331,22 @@ em {
   font-size: 16px;
   line-height: 1.63;
   padding-bottom: 60px;
+}
+@media (max-width: 1024px) {
+  .cs .cs-inner .cs-box .cs-content .cs-content-left .email-txt > p {
+    padding-bottom: 20px !important;
+  }
+}
+.cs .cs-inner .cs-box .cs-content .cs-content-left .email-txt > p .email-p {
+  display: block;
+}
+@media (max-width: 1024px) {
+  .cs .cs-inner .cs-box .cs-content .cs-content-left .email-txt > p .email-p2 {
+    display: block;
+  }
+}
+.cs .cs-inner .cs-box .cs-content .cs-content-left .email-txt > p .email-btn {
+  display: block;
 }
 .cs .cs-inner .cs-box .cs-content .cs-content-left .email-txt .email-btn {
   display: block;
@@ -346,11 +364,19 @@ em {
   top: 0;
   left: 0;
   display: block;
-  background: #eef8fa url(../../images/m_sec04_backimg01.png) no-repeat right/cover;
   background-size: 100%;
   width: 100%;
   height: 325px;
   z-index: -1;
+  background: #eef8fa url(../../images/m_sec04_backimg01.png) no-repeat right/cover;
+}
+@media (max-width: 1024px) {
+  .cs .cs-inner .cs-box .cs-content .cs-content-left .email-txt::after {
+    content: "" !important;
+    position: absolute !important;
+    background-position: -60px 120px !important;
+    background-size: 120% !important;
+  }
 }
 .cs .cs-inner .cs-box .cs-content .cs-content-right {
   position: relative;
@@ -381,6 +407,12 @@ em {
   color: #303030;
   margin-bottom: 30px;
 }
+@media (max-width: 1024px) {
+  .cs .cs-inner .cs-box .cs-content .cs-content-right .tell-txt > span:nth-child(2) {
+    font-size: 40px !important;
+    margin-bottom: 10px !important;
+  }
+}
 .cs .cs-inner .cs-box .cs-content .cs-content-right .tell-txt > span:nth-child(3) {
   display: inline-block;
   font-size: 16px;
@@ -392,17 +424,25 @@ em {
   font-weight: 500;
   padding-left: 15px;
 }
-.cs .cs-inner .cs-box .cs-content .cs-content-right::after {
+.cs .cs-inner .cs-box .cs-content .cs-content-right .tell-txt::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   display: block;
-  background: #fdf3f2 url(../../images/m_sec04_backimg02.png) no-repeat right/cover;
   background-size: 100%;
   width: 100%;
   height: 325px;
   z-index: -1;
+  background: #fdf3f2 url(../../images/m_sec04_backimg02.png) no-repeat right/cover;
+}
+@media (max-width: 1024px) {
+  .cs .cs-inner .cs-box .cs-content .cs-content-right .tell-txt::after {
+    content: "" !important;
+    position: absolute !important;
+    background-position: -60px 120px !important;
+    background-size: 120% !important;
+  }
 }
 .cs .cs-inner .cs-box .cs-more {
   display: flex;
@@ -440,6 +480,11 @@ em {
   -moz-column-gap: 30px;
        column-gap: 30px;
   row-gap: 10px;
+}
+@media (max-width: 1280px) {
+  .cs .cs-inner .cs-box .qna .qna-wrap {
+    grid-template-columns: 1fr !important;
+  }
 }
 .cs .cs-inner .cs-box .qna .qna-wrap .qna-list {
   position: relative;
@@ -490,6 +535,11 @@ em {
 }
 
 /* 의견 */
+
+.opinion {
+  position: relative;
+  margin: 0 25px;
+}
 
 .opinion .opinion-inner .opinion-head {
   font-family: "Binggrae-Bold";
@@ -549,3 +599,10 @@ em {
 }
 
 /* 하단 */
+.header,
+.visual,
+.product,
+.brand,
+.footer {
+  display: none;
+}

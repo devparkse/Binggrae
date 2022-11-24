@@ -1,6 +1,7 @@
 .cs {
   position: relative;
-  margin-bottom: 140px;
+  margin: 0 25px;
+  padding-bottom: 140px;
   .cs-inner {
     .cs-head {
       font-family: $bingbold;
@@ -26,7 +27,7 @@
           @include cs-content-box;
           .email-txt {
             @include cs-content-padding;
-            > span {
+            > .email-head {
               @include cs-content-txt;
               display: block;
             }
@@ -35,23 +36,32 @@
               font-size: 16px;
               line-height: 1.63;
               padding-bottom: 60px;
+              @include tablet2 {
+                padding-bottom: 20px !important;
+              }
+              .email-p {
+                display: block;
+              }
+              .email-p2 {
+                @include tablet2 {
+                  display: block;
+                }
+              }
+              .email-btn {
+                display: block;
+              }
             }
             .email-btn {
               display: block;
               @include cs-op-btn;
             }
             &::after {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              display: block;
+              @include cs-content-bg;
               background: #eef8fa url(../../images/m_sec04_backimg01.png)
                 no-repeat right / cover;
-              background-size: 100%;
-              width: 100%;
-              height: 325px;
-              z-index: -1;
+              @include tablet2 {
+                @include cs-content-bg-table2;
+              }
             }
           }
         }
@@ -72,12 +82,15 @@
               letter-spacing: -2.33px;
               color: #303030;
               margin-bottom: 30px;
+              @include tablet2 {
+                font-size: 40px !important;
+                margin-bottom: 10px !important;
+              }
             }
             > span:nth-child(3) {
               display: inline-block;
               font-size: 16px;
               line-height: 1;
-
               > em {
                 display: inline-block;
                 color: #e6342a;
@@ -85,19 +98,14 @@
                 padding-left: 15px;
               }
             }
-          }
-          &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: block;
-            background: #fdf3f2 url(../../images/m_sec04_backimg02.png)
-              no-repeat right / cover;
-            background-size: 100%;
-            width: 100%;
-            height: 325px;
-            z-index: -1;
+            &::after {
+              @include cs-content-bg;
+              background: #fdf3f2 url(../../images/m_sec04_backimg02.png)
+                no-repeat right / cover;
+              @include tablet2 {
+                @include cs-content-bg-table2;
+              }
+            }
           }
         }
       }
@@ -135,6 +143,9 @@
           grid-template-columns: repeat(2, 4fr);
           column-gap: 30px;
           row-gap: 10px;
+          @include tablet1 {
+            grid-template-columns: 1fr !important;
+          }
           .qna-list {
             position: relative;
             box-shadow: inset 0px 5px 10px 0 rgb(121 121 121 / 8%);
