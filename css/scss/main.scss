@@ -55,13 +55,15 @@ em {
 }
 // cs, opinion wrap
 .service-wrap {
-  width: 1310px;
+  max-width: 1310px;
 }
 /* 레이아웃 */
 .wrap {
   position: relative;
   display: block;
 }
+/*고정메뉴*/
+@import "sidemenu";
 /* 상단 */
 @import "header";
 /* 비주얼 */
@@ -76,3 +78,10 @@ em {
 @import "opinion";
 /* 하단 */
 @import "footer";
+.header,
+.visual,
+.product,
+.brand,
+.footer {
+  display: none;
+}
