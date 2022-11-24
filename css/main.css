@@ -243,6 +243,16 @@ em {
   width: 242px;
   height: 297px;
   overflow: hidden;
+  transition: transform 1s ease;
+}
+.product .product-inner .product-wrap .product-box-slide .product-box:hover {
+  transform: translateY(-5%);
+}
+.product .product-inner .product-wrap .product-box-slide .product-box:hover .product-txt > span:nth-child(1) {
+  display: none;
+}
+.product .product-inner .product-wrap .product-box-slide .product-box:hover .product-txt > span:nth-child(2) {
+  display: block;
 }
 .product .product-inner .product-wrap .product-box-slide .product-box .product-box-img {
   width: 242px;
@@ -268,6 +278,16 @@ em {
   margin: 12px 0 0;
   cursor: pointer;
 }
+.hover-txt {
+  display: none;
+  border-radius: 21px;
+  color: #fff;
+  background: #ed1c24;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 0.1px;
+}
+
 .product .product-inner .product-wrap .product-slide-next {
   width: 10px;
   height: 20px;
@@ -490,7 +510,6 @@ em {
 }
 
 /* 의견 */
-
 .opinion .opinion-inner .opinion-head {
   font-family: "Binggrae-Bold";
   font-size: 38px;
