@@ -345,7 +345,6 @@ em {
 /* 제품 */
 .product .product-inner {
   width: 1650px;
-  height: 420px;
 }
 .product .product-inner .product-title {
   font-family: "Binggrae-Bold";
@@ -358,11 +357,11 @@ em {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 20px 0 150px 0;
 }
 .product .product-inner .product-wrap .product-slide-prev {
-  width: 10px;
-  height: 20px;
+  width: 8px;
+  height: 15px;
   cursor: pointer;
   border: 0;
   font-size: 0;
@@ -423,8 +422,8 @@ em {
 }
 
 .product .product-inner .product-wrap .product-slide-next {
-  width: 10px;
-  height: 20px;
+  width: 8px;
+  height: 15px;
   cursor: pointer;
   border: 0;
   font-size: 0;
@@ -432,6 +431,90 @@ em {
 }
 
 /* 브랜드 */
+.brand .brnad-inner {
+  width: 1650px;
+}
+.brand .brnad-inner .brnad-title {
+  height: 55px;
+  font-family: "Binggrae-Bold";
+  font-size: 38px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 55px;
+  margin-bottom: 20px;
+}
+.brand .brnad-inner .brand-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 180px;
+}
+.brand .brnad-inner .brand-wrap .brand-slide-prev {
+  width: 8px;
+  height: 15px;
+  cursor: pointer;
+  border: 0;
+  font-size: 0;
+  background: url(/images/prev_arrow.png) no-repeat;
+}
+.brand .brnad-inner .brand-wrap .brand-box-slide {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 18px;
+}
+.brand-box {
+  width: 242px;
+  height: 250px;
+  border: 1px solid #edecef;
+  border-radius: 30px;
+  overflow: hidden;
+  transition: transform 1s ease;
+}
+.brand-box:hover {
+  transform: translateY(-5%);
+}
+.brand-box:hover > .hover-box {
+  display: block;
+}
+.brand-box .brand-box-img {
+  width: 242px;
+  height: 250px;
+  background: #fff;
+  position: relative;
+}
+.brand-box .brand-box-img img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.brand-box .hover-box {
+  display: none;
+  width: 242px;
+  height: 250px;
+}
+.brand-box .hover-box .hover-box-img {
+  width: 88px;
+  height: 32px;
+  position: relative;
+}
+.brand-box .hover-box .hover-box-img img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.brand-box .hover-box .hover-box-img img::after {
+  content: "";
+}
+.brand .brnad-inner .brand-wrap .brand-slide-next {
+  width: 8px;
+  height: 15px;
+  cursor: pointer;
+  border: 0;
+  font-size: 0;
+  background: url(/images/next_arrow.png) no-repeat;
+}
+
 /* cs */
 .cs {
   position: relative;

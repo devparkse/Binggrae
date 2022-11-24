@@ -1,7 +1,6 @@
 .product {
   .product-inner {
     width: 1650px;
-    height: 420px;
     .product-title {
       font-family: $bingbold;
       font-size: 38px;
@@ -13,7 +12,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 0;
+      padding: 20px 0 150px 0;
       .product-slide-prev {
         @include productBt;
         background: url(/images/prev_arrow.png) no-repeat;
