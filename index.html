@@ -144,16 +144,110 @@
     <!-- 햄버거 -->
     <div class="wrap">
       <!-- 상단 -->
-      <header class="header">
-        <div class="header-top"></div>
+      <header class="header inner">
+        <div class="header-top">
+          <ul class="header-top-menu">
+            <li>
+              <a href="#">
+                <span>구매포털시스템</span>
+                <img src="images/link_arrow02.png" alt="이동" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>인재채용</span>
+                <img src="images/link_arrow02.png" alt="이동" />
+              </a>
+            </li>
+          </ul>
+        </div>
         <div class="header-main">
-          <a href="index.html" class="logo"></a>
-          <nav class="nav"></nav>
-          <div class="lang"></div>
+          <a href="index.html" class="logo">
+            <img src="images/logo-pc.png" alt="빙그레" />
+          </a>
+          <nav class="nav">
+            <ul class="gnb">
+              <li>
+                <a href="#">회사소개</a>
+                <ul class="depth2">
+                  <li><a href="#">CEO인사말</a></li>
+                  <li><a href="#">경영이념</a></li>
+                  <li><a href="#">사업분야</a></li>
+                  <li><a href="#">히스토리</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">제품소개</a>
+                <ul class="depth2">
+                  <li><a href="#">아이스크림</a></li>
+                  <li><a href="#">우유/치즈</a></li>
+                  <li><a href="#">발효유</a></li>
+                  <li><a href="#">커피</a></li>
+                  <li><a href="#">주스</a></li>
+                  <li><a href="#">음료</a></li>
+                  <li><a href="#">스낵/디저트</a></li>
+                  <li><a href="#">건강지향식품</a></li>
+                  <li><a href="#">수출제품</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">지속가능경영</a>
+                <ul class="depth2">
+                  <li><a href="#">지속가능경영 체계</a></li>
+                  <li><a href="#">Eco-Friendly</a></li>
+                  <li><a href="#">Shared Value</a></li>
+                  <li><a href="#">Global Integrity</a></li>
+                  <li><a href="#">윤리준법경영</a></li>
+                  <li><a href="#">사회공헌</a></li>
+                  <li><a href="#">보고서 및 정책</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">투자정보</a>
+                <ul class="depth2">
+                  <li><a href="#">재무정보 </a></li>
+                  <li><a href="#">주식정보</a></li>
+                  <li><a href="#">전자공고</a></li>
+                  <li><a href="#">공시정보</a></li>
+                  <li><a href="#">IR자료실</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">뉴스룸</a>
+                <ul class="depth2">
+                  <li><a href="#"> 새소식 </a></li>
+                  <li><a href="#">보도자료</a></li>
+                  <li><a href="#">빙그레 스토리</a></li>
+                  <li><a href="#">미디어 라이브러리</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">고객센터</a>
+                <ul class="depth2">
+                  <li><a href="#">고객상담</a></li>
+                  <li><a href="#">제품공급문의</a></li>
+                  <li><a href="#">사이버 부정신고</a></li>
+                  <li><a href="#">안전신문고</a></li>
+                  <li><a href="#">개인정보처리방침</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="lang">
+            <span class="lang-kr">
+              kr
+              <img src="images/lang_btn.png" alt="" />
+            </span>
+            <ul class="lang-kind">
+              <li><a href="#">kr</a></li>
+              <li><a href="#">en</a></li>
+              <li><a href="#">cn</a></li>
+            </ul>
+          </div>
         </div>
       </header>
       <!-- 비주얼 -->
-      <section class="visual"></section>
+      <section class="visual inner"></section>
       <!-- 제품 -->
       <section class="product">
         <div class="product-inner inner">
@@ -214,29 +308,29 @@
           <h2 class="cs-head">고객문의 및 불편사항</h2>
           <div class="cs-box">
             <div class="cs-content">
-              <div class="content-email">
+              <a href="#" class="cs-content-left">
                 <div class="email-txt">
                   <span>이메일 상담</span>
                   <p>
                     빙그레에 궁금한 사항을 문의해 주세요<br />
                     최대한 빠른 시일내에 친절하게 답변해드리겠습니다.
                   </p>
+                  <button class="email-btn">상담하기</button>
                 </div>
-                <button class="email-btn">상담하기</button>
-              </div>
-              <a href="#" class="content-tell">
+              </a>
+              <div href="#" class="cs-content-right">
                 <p class="tell-txt">
                   <span>전화 상담</span>
                   <span>080.022.0056</span>
-                  <span>월~금(공휴일 제외) &nbsp;<em>09:00~1730</em></span>
+                  <span>월~금(공휴일 제외)<em>09:00~1730</em></span>
                 </p>
-              </a>
+              </div>
             </div>
             <div class="cs-more">
               <h3 class="more-txt">
                 자주 묻는 질문에 내용이 없을 경우, 이메일 및 전화 상담 바랍니다.
               </h3>
-              <a href="#" class="more-btn">더보기</a>
+              <a href="#"><button class="more-btn">더보기</button></a>
             </div>
             <div class="qna">
               <ul class="qna-wrap">
@@ -244,14 +338,18 @@
                   <a href="#" class="qna-link">
                     <em>Q.</em>
                     <span>아이스크림에는 왜 유통기한이 없나요?</span>
-                    <div class="qna-icon"></div>
+                    <div class="qna-icon">
+                      <img src="images/link_arrow01.png" alt="링크" />
+                    </div>
                   </a>
                 </li>
                 <li class="qna-list">
                   <a href="#" class="qna-link">
                     <em>Q.</em>
                     <span>유통기한 경과 제품, 빙그레에서 처리해주나요?</span>
-                    <div class="qna-icon"></div>
+                    <div class="qna-icon">
+                      <img src="images/link_arrow01.png" alt="링크" />
+                    </div>
                   </a>
                 </li>
                 <li class="qna-list">
@@ -260,28 +358,36 @@
                     <span
                       >제품 유통기한 뒤에 있는 알파벳 기호는 무엇인가요?</span
                     >
-                    <div class="qna-icon"></div>
+                    <div class="qna-icon">
+                      <img src="images/link_arrow01.png" alt="링크" />
+                    </div>
                   </a>
                 </li>
                 <li class="qna-list">
                   <a href="#" class="qna-link">
                     <em>Q.</em>
                     <span>빙그레 서체의 사용 범위를 알고 싶어요.</span>
-                    <div class="qna-icon"></div>
+                    <div class="qna-icon">
+                      <img src="images/link_arrow01.png" alt="링크" />
+                    </div>
                   </a>
                 </li>
                 <li class="qna-list">
                   <a href="#" class="qna-link">
                     <em>Q.</em>
                     <span>유통기한과 소비기한의 차이점은 무엇인가요?</span>
-                    <div class="qna-icon"></div>
+                    <div class="qna-icon">
+                      <img src="images/link_arrow01.png" alt="링크" />
+                    </div>
                   </a>
                 </li>
                 <li class="qna-list">
                   <a href="#" class="qna-link">
                     <em>Q.</em>
                     <span>소비기한은 언제부터 시행하나요?</span>
-                    <div class="qna-icon"></div>
+                    <div class="qna-icon">
+                      <img src="images/link_arrow01.png" alt="링크" />
+                    </div>
                   </a>
                 </li>
               </ul>
@@ -291,7 +397,27 @@
       </section>
       <!-- 의견 -->
       <section class="opinion">
-        <div class="opinion inner service-wrap"></div>
+        <div class="opinion-inner inner service-wrap">
+          <h2 class="opinion-head">빙그레 임직원 및 종사자 온라인제보</h2>
+          <div class="op-box">
+            <div class="op-content">
+              <a href="#" class="op-content-left">
+                <span class="op-content-txt"
+                  >빙그레 임직원의 부당한 요구 또는 업무 처리, 기타 부정행위
+                  제보</span
+                >
+                <button class="op-content-btn">사이버 부정신고</button>
+              </a>
+              <a href="#" class="op-content-right">
+                <span class="op-content-txt"
+                  >빙그레 종사자의 유해위험요소 및 안전•보건에 관한 의견
+                  제보</span
+                >
+                <button class="op-content-btn">안전신문고</button>
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
       <!-- 하단 -->
       <footer class="footer"></footer>
