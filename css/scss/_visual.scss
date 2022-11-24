@@ -29,6 +29,9 @@
         text-align: left;
         border: none;
         background: url("../../images/search_icon.png") no-repeat center left;
+        &:focus {
+          outline: none;
+        }
       }
       .search-button {
         max-width: 180px;
