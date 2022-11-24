@@ -671,10 +671,3 @@ em {
 }
 
 /* 하단 */
-.header,
-.visual,
-.product,
-.brand,
-.footer {
-  display: none;
-}
