@@ -209,6 +209,74 @@ em {
 }
 
 /* 제품 */
+.product .product-inner {
+  width: 1650px;
+  height: 420px;
+}
+.product .product-inner .product-title {
+  font-family: "Binggrae-Bold";
+  font-size: 38px;
+  line-height: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.product .product-inner .product-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+.product .product-inner .product-wrap .product-slide-prev {
+  width: 10px;
+  height: 20px;
+  cursor: pointer;
+  border: 0;
+  font-size: 0;
+  background: url(/images/prev_arrow.png) no-repeat;
+}
+.product .product-inner .product-wrap .product-box-slide {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 18px;
+}
+.product .product-inner .product-wrap .product-box-slide .product-box {
+  width: 242px;
+  height: 297px;
+  overflow: hidden;
+}
+.product .product-inner .product-wrap .product-box-slide .product-box .product-box-img {
+  width: 242px;
+  height: 242px;
+  position: relative;
+}
+.product .product-inner .product-wrap .product-box-slide .product-box .product-box-img img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.product .product-inner .product-wrap .product-box-slide .product-box .product-txt {
+  display: block;
+  height: 43px;
+  text-align: center;
+  color: #1f1f1f;
+  font-size: 16px;
+  line-height: 43px;
+  background: #f9f9f9;
+  border-radius: 21px;
+  margin: 12px 0 0;
+  cursor: pointer;
+}
+.product .product-inner .product-wrap .product-slide-next {
+  width: 10px;
+  height: 20px;
+  cursor: pointer;
+  border: 0;
+  font-size: 0;
+  background: url(/images/next_arrow.png) no-repeat;
+}
+
 /* 브랜드 */
 /* cs */
 .cs {
@@ -422,6 +490,7 @@ em {
 }
 
 /* 의견 */
+
 .opinion .opinion-inner .opinion-head {
   font-family: "Binggrae-Bold";
   font-size: 38px;
