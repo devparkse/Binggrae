@@ -1,3 +1,12 @@
+// brand: mixin
+@mixin productBt {
+  width: 10px;
+  height: 20px;
+  cursor: pointer;
+  border: 0;
+  font-size: 0;
+}
+
 // cs: mixin
 @mixin cs-op-btn {
   border: 0;
@@ -26,6 +35,7 @@
   letter-spacing: -1.6px;
   padding-bottom: 30px;
 }
+
 @mixin cs-content-bg {
   content: "";
   position: absolute;
@@ -43,6 +53,12 @@
   position: absolute !important;
   background-position: -60px 120px !important;
   background-size: 120% !important;
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 // opinion
 @mixin op-content-box {
