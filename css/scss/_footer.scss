@@ -1,3 +1,46 @@
 .footer {
-  
+  .footer-inner {
+    position: relative;
+    width: 100%;
+    background: #1b1b1b;
+    padding: 40px 50px 30px;
+    .f-main {
+      display: grid;
+
+      grid-template-areas:
+        "left . right"
+        "top . ."
+        "bottom . .";
+      img {
+        grid-area: left;
+        padding-bottom: 30px;
+      }
+      .f-sub {
+        grid-area: right;
+        justify-self: end;
+        .f-sub-list {
+          float: left;
+          padding-left: 20px;
+          a {
+            color: rgba(255, 255, 255, 0.3);
+          }
+        }
+      }
+      .f-p-top {
+        @include f-txt;
+        grid-area: top;
+        padding-bottom: 10px;
+      }
+      .f-p-bot {
+        @include f-txt;
+        grid-area: bottom;
+      }
+    }
+    .f-icon-wrap {
+    }
+    .copy {
+      letter-spacing: -0.15px;
+      color: rgba(255, 255, 255, 0.2);
+    }
+  }
 }

@@ -393,10 +393,52 @@ em {
 }
 
 /* 하단 */
+.footer .footer-inner {
+  position: relative;
+  width: 100%;
+  background: #1b1b1b;
+  padding: 40px 50px 30px;
+}
+.footer .footer-inner .f-main {
+  display: grid;
+  grid-template-areas: "left . right" "top . ." "bottom . .";
+}
+.footer .footer-inner .f-main img {
+  grid-area: left;
+  padding-bottom: 30px;
+}
+.footer .footer-inner .f-main .f-sub {
+  grid-area: right;
+  justify-self: end;
+}
+.footer .footer-inner .f-main .f-sub .f-sub-list {
+  float: left;
+  padding-left: 20px;
+}
+.footer .footer-inner .f-main .f-sub .f-sub-list a {
+  color: rgba(255, 255, 255, 0.3);
+}
+.footer .footer-inner .f-main .f-p-top {
+  font-size: 17px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  grid-area: top;
+  padding-bottom: 10px;
+}
+.footer .footer-inner .f-main .f-p-bot {
+  font-size: 17px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  grid-area: bottom;
+}
+.footer .footer-inner .copy {
+  letter-spacing: -0.15px;
+  color: rgba(255, 255, 255, 0.2);
+}
+
 .header,
 .visual,
 .product,
-.brand,
-.footer {
+.brand {
   display: none;
 }
