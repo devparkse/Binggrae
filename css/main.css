@@ -116,6 +116,9 @@ em {
   align-items: flex-start;
   position: relative;
 }
+.header .header-main .logo {
+  position: relative;
+}
 .header .header-main .nav {
   display: flex;
   white-space: nowrap;
@@ -181,20 +184,25 @@ em {
 }
 
 .gnb .lang {
-  position: relative;
-  padding-top: 10px;
-  margin-right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 100px;
 }
-.gnb .lang .lang-kr {
+.gnb .lang .lang-basic {
   font-size: 16px;
   font-weight: 600;
+  letter-spacing: -0.5px;
 }
-.gnb .lang .lang-kr .lang-kind {
+.gnb .lang .lang-kind {
   position: absolute;
-  top: 40%;
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
+  display: block;
   background: #fff;
+  border: 1px solid #fff;
   border-radius: 20px;
   padding: 10px 0;
   box-shadow: 0px 3px 7px 0 rgba(0, 0, 0, 0.05);
@@ -204,8 +212,74 @@ em {
 .visual {
   position: relative;
   display: block;
-  height: 500px;
+  height: 964px;
   background: url("../../images/pc_section01_3.jpg") no-repeat;
+}
+.visual > img {
+  margin: 0 auto;
+  display: block;
+  padding-top: 180px;
+}
+.visual .search .search-bar {
+  width: 1020px;
+  height: 80px;
+  align-items: center;
+  background: #fff;
+  margin: 0 auto;
+  padding-left: 35px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.visual .search .search-bar > input {
+  width: 79%;
+  height: 100%;
+  padding-left: 30px;
+  font-size: 17px;
+  letter-spacing: -0.85px;
+  text-align: left;
+  border: none;
+  background: url("../../images/search_icon.png") no-repeat center left;
+}
+.visual .search .search-bar .search-button {
+  max-width: 180px;
+  cursor: pointer;
+  width: 22%;
+  height: 55px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: normal;
+  border-radius: 27.5px;
+  border: none;
+  box-shadow: inset 0px 5px 10px 0 rgba(53, 53, 53, 0.11);
+  background: #ed1c24;
+  text-transform: uppercase;
+}
+.visual .search .tag {
+  margin-top: 25px;
+}
+.visual .search .tag .tag-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.visual .search .tag .tag-name > li {
+  cursor: pointer;
+  height: 37px;
+  border: 1px solid #edecef;
+  border-radius: 18.5px;
+  padding: 0 35px;
+  margin: 0 4px;
+}
+.visual .search .tag .tag-name > li > a {
+  font-family: "Binggrae";
+  font-size: 12px;
+  color: #1f1f1f;
+  text-align: center;
+  line-height: 37px;
 }
 
 /* 제품 */
@@ -490,7 +564,6 @@ em {
 }
 
 /* 의견 */
-
 .opinion .opinion-inner .opinion-head {
   font-family: "Binggrae-Bold";
   font-size: 38px;
