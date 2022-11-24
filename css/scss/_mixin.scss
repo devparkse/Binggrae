@@ -1,5 +1,25 @@
 // cs: mixin
-@mixin cs-bigbox {
+@mixin cs-op-btn {
+  border: 0;
+  background: #e6342a;
+  border-radius: 30px;
+  width: 160px;
+  cursor: pointer;
+  height: 43px;
+  color: #fff;
+}
+@mixin cs-content-box {
+  position: relative;
+  height: 325px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+@mixin cs-content-padding {
+  position: relative;
+  padding-left: 45px;
+  padding-top: 55px;
+}
+@mixin cs-content-txt {
   font-family: $bingbold;
   font-size: 32px;
   line-height: 1;
@@ -10,4 +30,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+// opinion
+@mixin op-content-box {
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: inset 0px 5px 10px 0 rgb(121 121 121 / 8%);
+}
+@mixin op-content-txt {
+  font-size: 20px;
+  display: block;
+  padding-top: 80px;
+  padding-bottom: 30px;
 }
