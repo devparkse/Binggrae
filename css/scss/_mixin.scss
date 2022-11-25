@@ -6,16 +6,13 @@
   transform: translate(-50%, -50%);
   @content;
 }
-// brand: mixin
-
-// header
+// header: mixin
 @mixin flexCenter {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 // product: mixin
-
 @mixin productBt {
   width: 8px;
   height: 15px;
