@@ -17,7 +17,7 @@
       padding: 20px 0 180px;
       .brand-slide-prev {
         @include brandBt;
-        background: url(/images/prev_arrow.png) no-repeat;
+        background: url(../../images/prev_arrow.png) no-repeat;
       }
       .brand-box-slide {
         display: flex;
@@ -61,7 +61,7 @@
       }
       .brand-slide-next {
         @include brandBt;
-        background: url(/images/next_arrow.png) no-repeat;
+        background: url(../../images/next_arrow.png) no-repeat;
       }
     }
   }

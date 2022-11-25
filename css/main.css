@@ -364,7 +364,7 @@ em {
   cursor: pointer;
   border: 0;
   font-size: 0;
-  background: url(/images/prev_arrow.png) no-repeat;
+  background: url(../../images/prev_arrow.png) no-repeat;
 }
 .product .product-inner .product-wrap .product-box-slide {
   display: flex;
@@ -426,7 +426,7 @@ em {
   cursor: pointer;
   border: 0;
   font-size: 0;
-  background: url(/images/next_arrow.png) no-repeat;
+  background: url(../../images/next_arrow.png) no-repeat;
 }
 
 /* 브랜드 */
@@ -454,7 +454,7 @@ em {
   cursor: pointer;
   border: 0;
   font-size: 0;
-  background: url(/images/prev_arrow.png) no-repeat;
+  background: url(../../images/prev_arrow.png) no-repeat;
 }
 .brand .brnad-inner .brand-wrap .brand-box-slide {
   display: flex;
@@ -490,7 +490,7 @@ em {
   cursor: pointer;
   border: 0;
   font-size: 0;
-  background: url(/images/next_arrow.png) no-repeat;
+  background: url(../../images/next_arrow.png) no-repeat;
 }
 
 /* cs */
