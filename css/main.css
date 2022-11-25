@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*폰트*/
-@import url("/font/font.css");
+@import url("../../font/font.css");
 @import url("../fontello/css/fontello.css");
 /*변수*/
 /*mixin*/
@@ -473,9 +473,6 @@ em {
 .brand-box:hover {
   transform: translateY(-5%);
 }
-.brand-box:hover > .hover-box {
-  display: block;
-}
 .brand-box .brand-box-img {
   width: 242px;
   height: 250px;
@@ -487,24 +484,6 @@ em {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-.brand-box .hover-box {
-  display: none;
-  width: 242px;
-  height: 250px;
-}
-.brand-box .hover-box .hover-box-img {
-  width: 88px;
-  height: 32px;
-  position: relative;
-}
-.brand-box .hover-box .hover-box-img img {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-.brand-box .hover-box .hover-box-img img::after {
-  content: "";
 }
 .brand .brnad-inner .brand-wrap .brand-slide-next {
   width: 8px;
@@ -1082,4 +1061,3 @@ em {
     left: 17px;
   }
 }
-
