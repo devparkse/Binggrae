@@ -6,8 +6,6 @@
   transform: translate(-50%, -50%);
   @content;
 }
-// brand: mixin
-
 // header
 @mixin flexCenter {
   display: flex;
@@ -15,21 +13,29 @@
   justify-content: center;
 }
 // product: mixin
-
 @mixin productBt {
-  width: 8px;
-  height: 15px;
   cursor: pointer;
   border: 0;
-  font-size: 0;
+  background: transparent;
+}
+@mixin productImg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);  
+  width: 100%;
 }
 // brand: mixin
 @mixin brandBt {
-  width: 8px;
-  height: 15px;
   cursor: pointer;
   border: 0;
-  font-size: 0;
+  background: transparent;
+}
+@mixin brandImg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); 
 }
 // cs: mixin
 @mixin cs-op-btn {
