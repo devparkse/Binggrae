@@ -6,7 +6,7 @@
   transform: translate(-50%, -50%);
   @content;
 }
-// header
+// header: mixin
 @mixin flexCenter {
   display: flex;
   align-items: center;
