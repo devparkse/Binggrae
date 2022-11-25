@@ -1,12 +1,6 @@
 @charset "UTF-8";
 /*폰트*/
 @import url("../fontello/css/fontello.css");
-@font-face {
-  font-family: "Binggrae";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 /*변수*/
 /*mixin*/
 /*리셋*/
@@ -340,7 +334,7 @@ em {
   margin: 0 4px;
 }
 .visual .search .tag .tag-name > li > a {
-  font-family: font-family "Binggrae";
+  font-family: "Binggrae";
   font-size: 12px;
   color: #1f1f1f;
   text-align: center;
@@ -720,7 +714,7 @@ em {
   line-height: 80px;
 }
 .cs .cs-inner .cs-box .qna .qna-wrap .qna-list .qna-link > em {
-  font-family: font-family "Binggrae";
+  font-family: "Binggrae";
   font-size: 18px;
   line-height: 1.4;
 }
