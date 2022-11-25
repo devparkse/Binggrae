@@ -288,7 +288,7 @@ em {
 /* 비주얼 */
 .visual {
   display: block;
-  height: 964px;
+  height: 980px;
 }
 .visual .visual-bg {
   width: 100%;
@@ -301,6 +301,9 @@ em {
   margin: 0 auto;
   display: block;
   padding-top: 180px;
+}
+.visual .search {
+  padding-top: 40px;
 }
 .visual .search .search-bar {
   width: 1020px;
