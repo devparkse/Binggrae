@@ -57,8 +57,8 @@
             }
             &::after {
               @include cs-content-bg;
-              background: #eef8fa url(../../images/m_sec04_backimg01.png)
-                no-repeat right / cover;
+              background: #eef8fa url(../images/sec04_backimg01.png) no-repeat
+                right / cover;
               @include tablet2 {
                 @include cs-content-bg-table2;
               }
@@ -100,8 +100,8 @@
             }
             &::after {
               @include cs-content-bg;
-              background: #fdf3f2 url(../../images/m_sec04_backimg02.png)
-                no-repeat right / cover;
+              background: #fdf3f2 url(../images/sec04_backimg02.png) no-repeat
+                right / cover;
               @include tablet2 {
                 @include cs-content-bg-table2;
               }
