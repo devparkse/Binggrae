@@ -15,7 +15,7 @@
       padding: 20px 0 150px 0;
       .product-slide-prev {
         @include productBt;
-        background: url(/images/prev_arrow.png) no-repeat;
+        background: url(../../images/prev_arrow.png) no-repeat;
       }
 
       .product-box-slide {
@@ -74,7 +74,7 @@
 
       .product-slide-next {
         @include productBt;
-        background: url(/images/next_arrow.png) no-repeat;
+        background: url(../../images/next_arrow.png) no-repeat;
       }
     }
   }
