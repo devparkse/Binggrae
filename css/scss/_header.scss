@@ -9,6 +9,9 @@
   .header-top {
     padding: 0 80px;
     border-bottom: 1px solid #e7e7e7;
+    @include tablet2 {
+      display: none;
+    }
     @at-root.header-top-menu {
       display: flex;
       justify-content: flex-end;
@@ -43,12 +46,37 @@
     justify-content: space-between;
     align-items: flex-start;
     position: relative;
+    @include pc1 {
+      padding: 40px 20px;
+    }
+    @include mobile {
+      padding: 22px 20px;
+    }
     .logo {
       position: relative;
+      .pc {
+        @include tablet2 {
+          display: none;
+        }
+      }
+      .mb {
+        display: none;
+        @include tablet2 {
+          display: block;
+          width: 117px;
+          height: 27.38px;
+        }
+      }
     }
     .nav {
-      @include flexCenter;
       white-space: nowrap;
+      @include flexCenter;
+      @include tablet1 {
+        margin-left: 30px;
+      }
+      @include tablet2 {
+        display: none;
+      }
       @at-root.gnb {
         position: relative;
         @include flexCenter;
@@ -64,6 +92,14 @@
           position: relative;
           display: block;
           margin-right: 5px;
+          transition: all ease 0.7s;
+          @include pc1 {
+            padding: 0 45px 0 0;
+            transition: all ease 0.7s;
+          }
+          @include tablet1 {
+            padding: 0 25px 0 0;
+          }
           &:hover > a {
             color: orangered;
             border-bottom: 2px solid orangered;
@@ -88,6 +124,9 @@
             padding-bottom: 40px;
             transition: color 0.5s;
             border-bottom: 2px solid transparent;
+            @include pc1 {
+              font-size: 16px;
+            }
           }
           @at-root.depth2 {
             position: absolute;
