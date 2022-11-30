@@ -3,7 +3,12 @@
 @font-face {
   font-family: "Binggrae";
   src: local("※"), url("../font/Binggrae.woff") format("woff");
+<<<<<<< HEAD:font/font.css
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae.woff")
+    format("woff");
+=======
   /* src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae.woff') format('woff'); */
+>>>>>>> d472c002fa22d2af61fdd43f88fb344dc48dd395:css/font/font.css
   font-weight: normal;
   font-style: normal;
 }
