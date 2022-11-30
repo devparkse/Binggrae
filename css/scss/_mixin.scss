@@ -6,15 +6,10 @@
   transform: translate(-50%, -50%);
   @content;
 }
-<<<<<<< HEAD
 // sidemenu: mixin
-
 // brand: mixin
-
 // header
-=======
 // header: mixin
->>>>>>> d472c002fa22d2af61fdd43f88fb344dc48dd395
 @mixin flexCenter {
   display: flex;
   align-items: center;
@@ -30,7 +25,7 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);  
+  transform: translate(-50%, -50%);
   width: 100%;
 }
 // brand: mixin
@@ -43,7 +38,7 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);
 }
 // cs: mixin
 @mixin cs-op-btn {
