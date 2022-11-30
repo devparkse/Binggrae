@@ -104,6 +104,16 @@
                 right / cover;
               @include tablet2 {
                 @include cs-content-bg-table2;
+                background-position: -200px 70px;
+              }
+              @include media-930 {
+                background-position: -180px 95px;
+              }
+              @include media-840 {
+                background-position: -160px 100px;
+              }
+              @include mobile {
+                background-position: -135px 120px;
               }
             }
           }

@@ -915,9 +915,6 @@ em {
 }
 @media (max-width: 1024px) {
   .cs .cs-inner .cs-box .cs-content .cs-content-left .email-txt::after {
-    content: "" !important;
-    position: absolute !important;
-    background-position: -60px 120px !important;
     background-size: 120% !important;
   }
 }
@@ -981,10 +978,23 @@ em {
 }
 @media (max-width: 1024px) {
   .cs .cs-inner .cs-box .cs-content .cs-content-right .tell-txt::after {
-    content: "" !important;
-    position: absolute !important;
-    background-position: -60px 120px !important;
     background-size: 120% !important;
+    background-position: -200px 70px;
+  }
+}
+@media (max-width: 930px) {
+  .cs .cs-inner .cs-box .cs-content .cs-content-right .tell-txt::after {
+    background-position: -180px 95px;
+  }
+}
+@media (max-width: 840px) {
+  .cs .cs-inner .cs-box .cs-content .cs-content-right .tell-txt::after {
+    background-position: -160px 100px;
+  }
+}
+@media (max-width: 767px) {
+  .cs .cs-inner .cs-box .cs-content .cs-content-right .tell-txt::after {
+    background-position: -135px 120px;
   }
 }
 .cs .cs-inner .cs-box .cs-more {
