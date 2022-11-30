@@ -81,9 +81,6 @@
 }
 // cs: 반응형 mixin
 @mixin cs-content-bg-table2 {
-  content: "" !important;
-  position: absolute !important;
-  background-position: -60px 120px !important;
   background-size: 120% !important;
 }
 
@@ -121,8 +118,18 @@
     @content;
   }
 }
+@mixin media-930 {
+  @media (max-width: 930px) {
+    @content;
+  }
+}
 @mixin media-870 {
   @media (max-width: 870px) {
+    @content;
+  }
+}
+@mixin media-840 {
+  @media (max-width: 840px) {
     @content;
   }
 }
