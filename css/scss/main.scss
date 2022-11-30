@@ -1,12 +1,9 @@
 @charset "utf-8";
-/*폰트*/
-@import url("/font/font.css");
-@import url("../fontello/css/fontello.css");
-/*변수*/
+// 변수
 @import "variables";
-/*mixin*/
+// mixin
 @import "mixin";
-/*리셋*/
+// 리셋
 * {
   margin: 0;
   padding: 0;

@@ -17,7 +17,7 @@
       padding: 20px 0 180px;
       .brand-slide-prev {
         @include brandBt;
-        background: url(/images/prev_arrow.png) no-repeat;
+        background: url(../../images/prev_arrow.png) no-repeat;
       }
       .brand-box-slide {
         display: flex;
@@ -40,10 +40,7 @@
           background: #fff;
           position: relative;
           img {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
+            @include brandImg;
           }
         }
         .hover-box {
@@ -61,7 +58,7 @@
       }
       .brand-slide-next {
         @include brandBt;
-        background: url(/images/next_arrow.png) no-repeat;
+        background: url(../../images/next_arrow.png) no-repeat;
       }
     }
   }

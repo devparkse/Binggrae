@@ -1,15 +1,20 @@
 .visual {
-  position: relative;
   display: block;
-  height: 964px;
-  background: url("../../images/pc_section01_3.jpg") no-repeat;
-
+  height: 980px;
+  .visual-bg {
+    width: 100%;
+    z-index: -10;
+    position: absolute;
+    top: -180px;
+    left: 0;
+  }
   > img {
     margin: 0 auto;
     display: block;
     padding-top: 180px;
   }
   .search {
+    padding-top: 40px;
     .search-bar {
       width: 1020px;
       height: 80px;
@@ -28,7 +33,7 @@
         letter-spacing: -0.85px;
         text-align: left;
         border: none;
-        background: url("../../images/search_icon.png") no-repeat center left;
+        background: url("../images/search_icon.png") no-repeat center left;
         &:focus {
           outline: none;
         }

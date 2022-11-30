@@ -47,12 +47,8 @@
       position: relative;
     }
     .nav {
-      display: flex;
+      @include flexCenter;
       white-space: nowrap;
-      // &:hover + .front-layer {
-      //   opacity: 1;
-      //   visibility: visible;
-      // }
       @at-root.gnb {
         position: relative;
         @include flexCenter;
@@ -60,6 +56,8 @@
         &:hover .depth2 {
           visibility: visible !important;
           opacity: 1 !important;
+          transition-delay: 0.7s;
+          transition-duration: 1s;
         }
         > li {
           padding: 0 80px 0 0;
@@ -99,7 +97,6 @@
             display: block;
             visibility: hidden;
             opacity: 0;
-            transition: all 1s;
             > li {
               > a {
                 position: relative;
@@ -116,22 +113,23 @@
           }
         }
       }
+      &:hover + .front-layer {
+        top: -40px;
+      }
     }
-    // .front-layer {
-    //   position: fixed;
-    //   left: 0;
-    //   top: 0;
-    //   display: block;
-    //   width: 100%;
-    //   height: 800px;
-    //   border-radius: 0 0 50px 50px;
-    //   background: #fff;
-    //   box-shadow: 0px 2px 9.8px 0.2px rgb(0 0 0 / 8%);
-    //   visibility: hidden;
-    //   opacity: 0;
-    //   transition: height 1s;
-    // }
-
+    .front-layer {
+      position: absolute;
+      top: -600px;
+      left: 0%;
+      width: 100%;
+      height: 550px;
+      z-index: -100;
+      opacity: 1;
+      background-color: #fff;
+      border-radius: 0 0 50px 50px;
+      box-shadow: 0px 2px 9.8px 0.2px rgb(0 0 0 / 8%);
+      transition: all ease 1s;
+    }
     .hearder-main-right {
       .lang {
         position: relative;
@@ -143,7 +141,6 @@
         letter-spacing: -0.5px;
         margin-right: 45px;
         float: left;
-
         a {
           position: relative;
           > img {
@@ -157,7 +154,8 @@
           position: absolute;
           top: 100%;
           left: 0;
-          display: none;
+          visibility: hidden;
+          opacity: 0;
           width: 50px;
           text-align: center;
           background-color: #fff;
@@ -166,13 +164,15 @@
           box-shadow: 0px 3px 7px 0 rgb(0 0 0 / 5%);
         }
         &:hover .lang-sort {
-          display: block;
+          visibility: visible;
+          opacity: 1;
+          transition-delay: 0.3s;
+          transition-duration: 1s;
         }
       }
       .icon-menu {
         font-family: fontello;
         font-size: 28px;
-
         float: right;
       }
     }

@@ -1,10 +1,4 @@
 @charset "UTF-8";
-/*폰트*/
-@import url("/font/font.css");
-@import url("../fontello/css/fontello.css");
-/*변수*/
-/*mixin*/
-/*리셋*/
 * {
   margin: 0;
   padding: 0;
@@ -96,7 +90,7 @@ em {
   display: block;
   width: 55px;
   height: 55px;
-  background: #000 url("../../images/fix_arrow.png") no-repeat center;
+  background: #000 url("../images/fix_arrow.png") no-repeat center;
   transform: rotate(180deg);
   font-weight: 500;
   border-radius: 50%;
@@ -297,6 +291,8 @@ em {
 }
 .header .header-main .nav {
   display: flex;
+  align-items: center;
+  justify-content: center;
   white-space: nowrap;
 }
 .gnb {
@@ -309,6 +305,8 @@ em {
 .gnb:hover .depth2 {
   visibility: visible !important;
   opacity: 1 !important;
+  transition-delay: 0.7s;
+  transition-duration: 1s;
 }
 .gnb > li {
   padding: 0 80px 0 0;
@@ -347,7 +345,6 @@ em {
   display: block;
   visibility: hidden;
   opacity: 0;
-  transition: all 1s;
 }
 .depth2 > li > a {
   position: relative;
@@ -361,6 +358,22 @@ em {
   color: orangered;
 }
 
+.header .header-main .nav:hover + .front-layer {
+  top: -40px;
+}
+.header .header-main .front-layer {
+  position: absolute;
+  top: -600px;
+  left: 0%;
+  width: 100%;
+  height: 550px;
+  z-index: -100;
+  opacity: 1;
+  background-color: #fff;
+  border-radius: 0 0 50px 50px;
+  box-shadow: 0px 2px 9.8px 0.2px rgba(0, 0, 0, 0.08);
+  transition: all ease 1s;
+}
 .header .header-main .hearder-main-right .lang {
   position: relative;
   display: block;
@@ -385,7 +398,8 @@ em {
   position: absolute;
   top: 100%;
   left: 0;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   width: 50px;
   text-align: center;
   background-color: #fff;
@@ -394,7 +408,10 @@ em {
   box-shadow: 0px 3px 7px 0 rgba(0, 0, 0, 0.05);
 }
 .header .header-main .hearder-main-right .lang:hover .lang-sort {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.3s;
+  transition-duration: 1s;
 }
 .header .header-main .hearder-main-right .icon-menu {
   font-family: fontello;
@@ -404,15 +421,23 @@ em {
 
 /* 비주얼 */
 .visual {
-  position: relative;
   display: block;
-  height: 964px;
-  background: url("../../images/pc_section01_3.jpg") no-repeat;
+  height: 980px;
+}
+.visual .visual-bg {
+  width: 100%;
+  z-index: -10;
+  position: absolute;
+  top: -180px;
+  left: 0;
 }
 .visual > img {
   margin: 0 auto;
   display: block;
   padding-top: 180px;
+}
+.visual .search {
+  padding-top: 40px;
 }
 .visual .search .search-bar {
   width: 1020px;
@@ -435,7 +460,7 @@ em {
   letter-spacing: -0.85px;
   text-align: left;
   border: none;
-  background: url("../../images/search_icon.png") no-repeat center left;
+  background: url("../images/search_icon.png") no-repeat center left;
 }
 .visual .search .search-bar > input:focus {
   outline: none;
@@ -497,12 +522,9 @@ em {
   padding: 20px 0 150px 0;
 }
 .product .product-inner .product-wrap .product-slide-prev {
-  width: 8px;
-  height: 15px;
   cursor: pointer;
   border: 0;
-  font-size: 0;
-  background: url(/images/prev_arrow.png) no-repeat;
+  background: transparent;
 }
 .product .product-inner .product-wrap .product-box-slide {
   display: flex;
@@ -559,12 +581,10 @@ em {
 }
 
 .product .product-inner .product-wrap .product-slide-next {
-  width: 8px;
-  height: 15px;
   cursor: pointer;
   border: 0;
-  font-size: 0;
-  background: url(/images/next_arrow.png) no-repeat;
+  background: transparent;
+  background: url(../../images/next_arrow.png) no-repeat;
 }
 
 /* 브랜드 */
@@ -587,12 +607,10 @@ em {
   padding: 20px 0 180px;
 }
 .brand .brnad-inner .brand-wrap .brand-slide-prev {
-  width: 8px;
-  height: 15px;
   cursor: pointer;
   border: 0;
-  font-size: 0;
-  background: url(/images/prev_arrow.png) no-repeat;
+  background: transparent;
+  background: url(../../images/prev_arrow.png) no-repeat;
 }
 .brand .brnad-inner .brand-wrap .brand-box-slide {
   display: flex;
@@ -623,12 +641,10 @@ em {
   transform: translate(-50%, -50%);
 }
 .brand .brnad-inner .brand-wrap .brand-slide-next {
-  width: 8px;
-  height: 15px;
   cursor: pointer;
   border: 0;
-  font-size: 0;
-  background: url(/images/next_arrow.png) no-repeat;
+  background: transparent;
+  background: url(../../images/next_arrow.png) no-repeat;
 }
 
 /* cs */
@@ -720,7 +736,7 @@ em {
   width: 100%;
   height: 325px;
   z-index: -1;
-  background: #eef8fa url(../../images/m_sec04_backimg01.png) no-repeat right/cover;
+  background: #eef8fa url(../images/sec04_backimg01.png) no-repeat right/cover;
 }
 @media (max-width: 1024px) {
   .cs .cs-inner .cs-box .cs-content .cs-content-left .email-txt::after {
@@ -786,7 +802,7 @@ em {
   width: 100%;
   height: 325px;
   z-index: -1;
-  background: #fdf3f2 url(../../images/m_sec04_backimg02.png) no-repeat right/cover;
+  background: #fdf3f2 url(../images/sec04_backimg02.png) no-repeat right/cover;
 }
 @media (max-width: 1024px) {
   .cs .cs-inner .cs-box .cs-content .cs-content-right .tell-txt::after {
@@ -1197,8 +1213,11 @@ em {
     width: 10px;
     left: 17px;
   }
+<<<<<<< HEAD
 }
 
 .sidemenu {
   display: none;
+=======
+>>>>>>> d472c002fa22d2af61fdd43f88fb344dc48dd395
 }
