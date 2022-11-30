@@ -85,7 +85,9 @@
         }
       }
     }
-
+    &:hover .side-lang-menu {
+      display: block;
+    }
     .side-icon-menu {
       font-family: fontello;
       font-size: 28px;
@@ -130,6 +132,11 @@
               &:first-child {
                 margin: 0;
               }
+          }
+          .side-depth {
+            padding-top: 40px;
+            li {
+              position: relative;
               > a {
                 font-family: "Poppins", "Noto Sans KR", sans-serif;
                 font-size: 18px;
@@ -149,6 +156,15 @@
                 &:hover {
                   color: #e0462e;
                   font-weight: bold;
+                line-height: 36px;
+                position: relative;
+                &::after {
+                  content: "";
+                  position: absolute;
+                  width: 100px;
+                  height: 50px;
+                  right: 0;
+                  background: url(../../images/m_link_arrow01.png) no-repeat;
                 }
               }
             }
@@ -156,6 +172,7 @@
               padding-bottom: 5px;
               .side-depth2 {
                 padding-top: 15px;
+              .side-depth2 {
                 color: rgba(52, 52, 52, 0.8);
                 font-size: 15px;
                 font-weight: 300;
