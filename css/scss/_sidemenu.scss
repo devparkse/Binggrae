@@ -85,9 +85,6 @@
         }
       }
     }
-    &:hover .side-lang-menu {
-      display: block;
-    }
     .side-icon-menu {
       font-family: fontello;
       font-size: 28px;
@@ -120,7 +117,6 @@
           > a {
             font-family: $bingbold;
             font-size: 32px;
-            line-height: 1;
             letter-spacing: -1.6px;
             display: block;
             padding-bottom: 40px;
@@ -132,16 +128,11 @@
               &:first-child {
                 margin: 0;
               }
-          }
-          .side-depth {
-            padding-top: 40px;
-            li {
-              position: relative;
-              > a {
+              a {
                 font-family: "Poppins", "Noto Sans KR", sans-serif;
                 font-size: 18px;
+                line-height: 1;
                 font-weight: normal;
-                line-height: 18px;
                 position: relative;
                 display: block;
                 &:hover::after {
@@ -156,26 +147,24 @@
                 &:hover {
                   color: #e0462e;
                   font-weight: bold;
-                line-height: 36px;
-                position: relative;
-                &::after {
-                  content: "";
-                  position: absolute;
-                  width: 100px;
-                  height: 50px;
-                  right: 0;
-                  background: url(../../images/m_link_arrow01.png) no-repeat;
                 }
               }
             }
             .side-depth-qna {
-              padding-bottom: 5px;
-              .side-depth2 {
-                padding-top: 15px;
-              .side-depth2 {
-                color: rgba(52, 52, 52, 0.8);
-                font-size: 15px;
-                font-weight: 300;
+              a {
+                span {
+                }
+                .side-depth2 {
+                  padding-top: 20px;
+                  li {
+                    color: rgba(52, 52, 52, 0.8);
+                    font-size: 15px;
+                    font-weight: 300;
+                  }
+                }
+                &:hover .side-depth2 {
+                  font-weight: bold;
+                }
               }
             }
           }

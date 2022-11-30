@@ -1,8 +1,9 @@
 .footer {
+  background: #1b1b1b;
   .footer-inner {
     position: relative;
-    width: 100%;
-    background: #1b1b1b;
+    max-width: 1920px;
+    margin: 0 auto;
     padding: 40px 50px 30px;
     @include mobile {
       padding: 30px 20px;
