@@ -8,7 +8,10 @@
       position: relative;
       text-align: center;
       font-size: 38px;
-      margin-bottom: 45px;
+      margin-bottom: 50px;
+      @include mobile {
+        font-size: 22px;
+      }
     }
     .cs-box {
       position: relative;
@@ -17,18 +20,34 @@
       border-radius: 30px;
       padding: 90px 45px;
       z-index: 1;
+      @include mobile {
+        box-shadow: none;
+        border: solid 1px rgba(224, 223, 226, 0.6);
+        padding: 40px 15px;
+      }
       .cs-content {
         position: relative;
         display: grid;
         gap: 35px;
         grid-template-columns: 1fr 1fr;
-        margin-bottom: 60px;
+        margin-bottom: 55px;
+        @include mobile {
+          grid-template-columns: 1fr;
+          gap: 10px;
+          margin-bottom: 50px;
+        }
         .cs-content-left {
           @include cs-content-box;
+          @include mobile {
+            @include mobile-cs-content-box;
+          }
           .email-txt {
             @include cs-content-padding;
             > .email-head {
               @include cs-content-txt;
+              @include mobile {
+                font-size: 18px;
+              }
               display: block;
             }
             > p {
@@ -39,39 +58,60 @@
               @include tablet2 {
                 padding-bottom: 20px !important;
               }
-              .email-p {
-                display: block;
+              @include mobile {
+                font-size: 14px;
               }
-              .email-p2 {
+              .br {
+                display: none;
                 @include tablet2 {
                   display: block;
                 }
               }
-              .email-btn {
+              .email-p {
                 display: block;
+                @include mobile {
+                  display: none;
+                }
+                .email-p2 {
+                  @include tablet2 {
+                    display: block;
+                  }
+                }
               }
             }
             .email-btn {
               display: block;
               @include cs-op-btn;
+              @include mobile {
+                display: none;
+              }
             }
             &::after {
               @include cs-content-bg;
               background: #eef8fa url(../images/sec04_backimg01.png) no-repeat
                 right / cover;
               @include tablet2 {
-                @include cs-content-bg-table2;
+                @include tablet2-cs-content-bg;
+              }
+              @include mobile {
+                background-position: -100px -170px;
               }
             }
           }
         }
         .cs-content-right {
           @include cs-content-box;
+          @include mobile {
+            @include mobile-cs-content-box;
+          }
           .tell-txt {
             @include cs-content-padding;
             > span:nth-child(1) {
-              display: block;
               @include cs-content-txt;
+              display: block;
+              @include mobile {
+                font-size: 18px;
+              }
             }
             > span:nth-child(2) {
               display: block;
@@ -84,7 +124,10 @@
               margin-bottom: 30px;
               @include tablet2 {
                 font-size: 40px !important;
-                margin-bottom: 10px !important;
+                margin-bottom: 5px !important;
+              }
+              @include mobile {
+                font-size: 18px !important;
               }
             }
             > span:nth-child(3) {
@@ -97,13 +140,16 @@
                 font-weight: 500;
                 padding-left: 15px;
               }
+              @include mobile {
+                font-size: 14px;
+              }
             }
             &::after {
               @include cs-content-bg;
               background: #fdf3f2 url(../images/sec04_backimg02.png) no-repeat
                 right / cover;
               @include tablet2 {
-                @include cs-content-bg-table2;
+                @include tablet2-cs-content-bg;
                 background-position: -200px 70px;
               }
               @include media-930 {
@@ -112,8 +158,11 @@
               @include media-840 {
                 background-position: -160px 100px;
               }
+              @include media-812 {
+                background-position: -150px 100px;
+              }
               @include mobile {
-                background-position: -135px 120px;
+                background-position: -100px -200px;
               }
             }
           }
@@ -122,12 +171,24 @@
       .cs-more {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin-bottom: 30px;
         .more-txt {
           font-size: 23px;
           font-family: $bingbold;
           line-height: 1;
           letter-spacing: -1.6px;
+          @include media-923 {
+            font-size: 20px;
+            letter-spacing: -2.2px;
+          }
+          @include media-802 {
+            font-size: 19px;
+            letter-spacing: -2.4px;
+          }
+          @include mobile {
+            font-size: 18px;
+          }
         }
         .more-btn {
           font-size: 14px;
@@ -139,6 +200,10 @@
           border-radius: 30px;
           cursor: pointer;
           &:hover {
+            background: #e6342a;
+            color: #fff;
+          }
+          @include mobile {
             background: #e6342a;
             color: #fff;
           }
@@ -163,19 +228,23 @@
             border-radius: 30px;
             height: 80px;
             background: #f9f9f9;
+            @include mobile {
+              height: 40px;
+            }
             .qna-link {
+              position: relative;
               display: block;
-              height: 80px;
+              height: 100%;
               line-height: 80px;
-
+              font-size: 18px;
+              @include mobile {
+                line-height: 40px;
+                font-size: 14px;
+              }
               > em {
                 font-family: $bing;
-                font-size: 18px;
-                line-height: 1.4;
               }
               > span {
-                font-size: 18px;
-                line-height: 1.4;
               }
               .qna-icon {
                 position: absolute;
@@ -193,7 +262,27 @@
                 align-items: center;
                 justify-content: center;
                 img {
-                  display: block;
+                  &:nth-child(1) {
+                    display: block;
+                    @include mobile {
+                      display: none;
+                    }
+                  }
+                  &:nth-child(2) {
+                    display: none;
+                    @include mobile {
+                      width: 12px;
+                      display: block;
+                      transform: scale(1) !important;
+                    }
+                  }
+                }
+                @include mobile {
+                  width: 20px;
+                  right: 0px;
+                  transform: scale(1) translateY(-50%) !important;
+                  background-color: transparent;
+                  box-shadow: none;
                 }
               }
               &:hover {
