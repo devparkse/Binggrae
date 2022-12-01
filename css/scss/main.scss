@@ -62,6 +62,7 @@ em {
 }
 /*고정메뉴*/
 @import "fixMenu";
+/*사이드메뉴*/
 /* 사이드메뉴 */
 @import "sidemenu";
 /* 상단 */
@@ -78,7 +79,18 @@ em {
 @import "opinion";
 /* 하단 */
 @import "footer";
-
+.header,
+.visual,
+.product,
+.brand,
+.cs,
+.opinion,
+.footer {
+  // display: none !important;
+}
+.sidemenu {
+  // display: none;
+}
 .sidemenu {
   display: none;
 }
