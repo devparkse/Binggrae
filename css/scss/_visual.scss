@@ -1,17 +1,14 @@
 .visual {
   position: relative;
   display: block;
-  height: 980px;
+  padding: 180px 0;
   text-align: center;
-  .visual-bg {
-    position: absolute;
-    top: -180px;
-    left: 0;
-    width: 100%;
-    z-index: -10;
+  background: url("../images/pc_section01_3.jpg") no-repeat center / cover;
+  @include mobile {
+    padding: 130px 0 60px;
+    background: url("../images/mo_section01_3.jpg") no-repeat center / cover;
   }
   .v-pc {
-    padding-top: 180px;
     @include pc2 {
       width: 95%;
     }
@@ -20,6 +17,7 @@
     }
   }
   .v-mb {
+    width: 95%;
     display: none;
     @include tablet2 {
       display: inline-block;

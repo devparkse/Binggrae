@@ -180,6 +180,9 @@
         letter-spacing: -0.5px;
         margin-right: 45px;
         float: left;
+        @include mobile {
+          margin-right: 30px;
+        }
         a {
           position: relative;
           > img {
@@ -213,6 +216,9 @@
         font-family: fontello;
         font-size: 28px;
         float: right;
+        @include mobile {
+          font-size: 25px;
+        }
       }
     }
   }

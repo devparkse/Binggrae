@@ -467,6 +467,11 @@ em {
   margin-right: 45px;
   float: left;
 }
+@media (max-width: 767px) {
+  .header .header-main .hearder-main-right .lang {
+    margin-right: 30px;
+  }
+}
 .header .header-main .hearder-main-right .lang a {
   position: relative;
 }
@@ -500,23 +505,25 @@ em {
   font-size: 28px;
   float: right;
 }
+@media (max-width: 767px) {
+  .header .header-main .hearder-main-right .icon-menu {
+    font-size: 25px;
+  }
+}
 
 /* 비주얼 */
 .visual {
   position: relative;
   display: block;
-  height: 980px;
+  padding: 180px 0;
   text-align: center;
+  background: url("../images/pc_section01_3.jpg") no-repeat center/cover;
 }
-.visual .visual-bg {
-  position: absolute;
-  top: -180px;
-  left: 0;
-  width: 100%;
-  z-index: -10;
-}
-.visual .v-pc {
-  padding-top: 180px;
+@media (max-width: 767px) {
+  .visual {
+    padding: 130px 0 60px;
+    background: url("../images/mo_section01_3.jpg") no-repeat center/cover;
+  }
 }
 @media (max-width: 1300px) {
   .visual .v-pc {
@@ -529,6 +536,7 @@ em {
   }
 }
 .visual .v-mb {
+  width: 95%;
   display: none;
 }
 @media (max-width: 1024px) {
