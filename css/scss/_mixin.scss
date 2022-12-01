@@ -60,6 +60,10 @@
   position: relative;
   padding-left: 45px;
   padding-top: 55px;
+  @include mobile {
+    padding-left: 25px;
+    padding-top: 30px;
+  }
 }
 @mixin cs-content-txt {
   font-family: $bingbold;
@@ -67,6 +71,9 @@
   line-height: 1;
   letter-spacing: -1.6px;
   padding-bottom: 30px;
+  @include mobile {
+    padding-bottom: 10px;
+  }
 }
 @mixin cs-content-bg {
   content: "";
@@ -79,11 +86,18 @@
   height: 325px;
   z-index: -1;
 }
+
 // cs: 반응형 mixin
-@mixin cs-content-bg-table2 {
+@mixin mobile-cs-content-box {
+  height: 125px;
+}
+@mixin tablet2-cs-content-bg {
   background-size: 120% !important;
 }
-
+@mixin mobile-cs-content-txt {
+  font-size: 18px !important;
+  padding-bottom: 15px !important;
+}
 // opinion
 @mixin op-content-box {
   border-radius: 30px;
@@ -133,6 +147,11 @@
     @content;
   }
 }
+@mixin media-923 {
+  @media (max-width: 923px) {
+    @content;
+  }
+}
 @mixin media-870 {
   @media (max-width: 870px) {
     @content;
@@ -140,6 +159,16 @@
 }
 @mixin media-840 {
   @media (max-width: 840px) {
+    @content;
+  }
+}
+@mixin media-812 {
+  @media (max-width: 812px) {
+    @content;
+  }
+}
+@mixin media-802 {
+  @media (max-width: 802px) {
     @content;
   }
 }
