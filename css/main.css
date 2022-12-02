@@ -85,16 +85,33 @@ em {
   box-shadow: 0px 3px 8px 1px rgba(0, 0, 0, 0.06), inset 0px 5px 10px 0 rgba(255, 255, 255, 0.14);
   margin-bottom: 5px;
   cursor: pointer;
+  transition: all ease 0.5s;
+}
+@media (max-width: 767px) {
+  .fix-button .fix-button-top {
+    width: 42px;
+    height: 42px;
+    font-size: 10px;
+  }
 }
 .fix-button .fix-button-bottom {
   display: block;
   width: 55px;
   height: 55px;
+  border: #000;
   background: #000 url("../images/fix_arrow.png") no-repeat center;
   transform: rotate(180deg);
   font-weight: 500;
   border-radius: 50%;
   cursor: pointer;
+  transition: all ease 0.5s;
+}
+@media (max-width: 767px) {
+  .fix-button .fix-button-bottom {
+    width: 42px;
+    height: 42px;
+    font-size: 10px;
+  }
 }
 .fix-button .fix-button-bottom:active {
   transform: rotate(360deg);
@@ -514,6 +531,7 @@ em {
 /* 비주얼 */
 .visual {
   position: relative;
+  width: 100%;
   display: block;
   padding: 180px 0;
   text-align: center;

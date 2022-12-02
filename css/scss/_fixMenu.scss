@@ -3,6 +3,7 @@
   bottom: 60px;
   right: 30px;
   z-index: 1000000;
+
   .fix-button-top {
     display: block;
     width: 55px;
@@ -17,16 +18,29 @@
       inset 0px 5px 10px 0 rgb(255 255 255 / 14%);
     margin-bottom: 5px;
     cursor: pointer;
+    transition: all ease 0.5s;
+    @include mobile {
+      width: 42px;
+      height: 42px;
+      font-size: 10px;
+    }
   }
   .fix-button-bottom {
     display: block;
     width: 55px;
     height: 55px;
+    border: #000;
     background: #000 url("../images/fix_arrow.png") no-repeat center;
     transform: rotate(180deg);
     font-weight: 500;
     border-radius: 50%;
     cursor: pointer;
+    transition: all ease 0.5s;
+    @include mobile {
+      width: 42px;
+      height: 42px;
+      font-size: 10px;
+    }
   }
   .fix-button-bottom:active {
     transform: rotate(360deg);
