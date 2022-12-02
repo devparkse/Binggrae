@@ -40,7 +40,11 @@
             height: 242px;
             position: relative;
             img {
-              @include productImg;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              width: 100%;
             }
           }
           .product-txt {
@@ -72,5 +76,12 @@
         background: url(../../images/next_arrow.png) no-repeat;
       }
     }
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .product-wrap {
+    width: 95%;
+    margin: 0 auto;
   }
 }

@@ -759,6 +759,12 @@ em {
   background: url(../../images/next_arrow.png) no-repeat;
 }
 
+@media screen and (max-width: 1700px) {
+  .product-wrap {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
 /* 브랜드 */
 .brand .brnad-inner {
   width: 1650px;
