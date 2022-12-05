@@ -95,3 +95,22 @@ em {
 .sidemenu {
   display: none;
 }
+
+.pong {
+  animation-name: pongani;
+  animation-duration: 1 s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  // animation-fill-mode: both;
+  // animation-play-state: running;
+}
+
+@keyframes pongani {
+  0% {
+  }
+  50% {
+  }
+  100% {
+  }
+}

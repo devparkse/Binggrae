@@ -182,3 +182,8 @@
     @content;
   }
 }
+@mixin media-630 {
+  @media (max-width: 630px) {
+    @content;
+  }
+}

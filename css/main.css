@@ -1169,6 +1169,11 @@ em {
     background-position: -100px -200px;
   }
 }
+@media (max-width: 630px) {
+  .cs .cs-inner .cs-box .cs-content .cs-content-right .tell-txt::after {
+    background-position: -100px -180px;
+  }
+}
 .cs .cs-inner .cs-box .cs-more {
   display: flex;
   justify-content: space-between;
@@ -1633,3 +1638,20 @@ em {
 .sidemenu {
   display: none;
 }
+
+.pong {
+  -webkit-animation-name: pongani;
+          animation-name: pongani;
+  -webkit-animation-duration: 1 s;
+          animation-duration: 1 s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes pongani {}
+
+@keyframes pongani {}
