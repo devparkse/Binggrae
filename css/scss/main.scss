@@ -79,38 +79,14 @@ em {
 @import "opinion";
 /* 하단 */
 @import "footer";
-.header,
-.visual,
-.product,
-.brand,
-.cs,
-.opinion,
-.footer {
-  // display: none !important;
+.wrap {
+  display: block;
 }
 .sidemenu {
   // display: none;
 }
 //사이드메뉴 펼치고 접기
 .sidemenu {
-  display: none;
-}
-
-.pong {
-  animation-name: pongani;
-  animation-duration: 1 s;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  // animation-fill-mode: both;
-  // animation-play-state: running;
-}
-
-@keyframes pongani {
-  0% {
-  }
-  50% {
-  }
-  100% {
-  }
+  // display: none;
+  display: block;
 }
