@@ -21,13 +21,6 @@
   border: 0;
   background: transparent;
 }
-@mixin productImg {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-}
 // brand: mixin
 @mixin brandBt {
   cursor: pointer;
@@ -41,6 +34,7 @@
   transform: translate(-50%, -50%);
 }
 // cs-op
+// cs: mixin
 @mixin cs-op-btn {
   border: 0;
   background: #e6342a;

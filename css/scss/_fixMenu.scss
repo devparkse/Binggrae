@@ -46,3 +46,25 @@
     transform: rotate(360deg);
   }
 }
+// 울렁애니메이션
+.pong {
+  animation-name: pongani;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.pong:hover {
+  animation-play-state: paused;
+}
+@keyframes pongani {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
