@@ -124,8 +124,9 @@
     <![endif]-->
     <script src="js/prefixfree.min.js"></script>
     <script src="js/respond.min.js"></script>
-    <script src="js/script.js"></script>
-    <title>빙그레</title>
+    <script src="js/script.js" defer></script>
+    <script src="js/header.js" defer></script>
+
     <link rel="stylesheet" href="css/normalize.css" />
     <!-- fontello -->
     <link rel="stylesheet" href="css/fontello/css/fontello.css" />
@@ -139,6 +140,7 @@
     />
     <link rel="stylesheet" href="css/font/font.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <title>빙그레</title>
   </head>
   <body>
     <!-- 고정메뉴 -->
@@ -147,7 +149,8 @@
       <button class="fix-button-bottom"></button>
     </div>
     <!-- 햄버거 -->
-    <section class="sidemenu">
+    <section class="sidemenu clearfix">
+      <div class="black_bg"></div>
       <div class="side-top">
         <ul class="side-top-menu">
           <li>

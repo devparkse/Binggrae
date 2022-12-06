@@ -3,6 +3,14 @@
   height: 100vh;
   display: block;
   z-index: 99999;
+  .black_bg {
+    width: calc(100% - 500px);
+    height: 100%;
+    display: none;
+    background: yellow;
+    float: left;
+    
+  }
   .side-top {
     padding: 0 80px;
     border-bottom: 1px solid #e7e7e7;
@@ -100,6 +108,9 @@
       .side-gnb {
         display: flex;
         justify-content: space-around;
+        @include tablet2 {
+          flex-direction: column;
+        }
         .side-list {
           width: 250px;
           height: 460px;
