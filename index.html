@@ -126,7 +126,9 @@
     <script src="js/respond.min.js"></script>
     <script src="js/script.js" defer></script>
     <script src="js/header.js" defer></script>
-
+    <script src="js/product.js" defer></script>
+    <script src="js/brand.js" defer></script>
+    
     <link rel="stylesheet" href="css/normalize.css" />
     <!-- fontello -->
     <link rel="stylesheet" href="css/fontello/css/fontello.css" />
@@ -408,70 +410,92 @@
       <section class="product">
         <div class="product-inner inner">
           <h2 class="product-title">행복한 빙그레의 맛!</h2>
-          <div class="product-wrap">
-            <button class="product-slide-prev">
-              <img src="images/prev_arrow.png" />
+          <ul class="product-slide">
+            <button class="product-prev-bt">
+              <img src="images/prev_arrow.png" alt="이전버튼" />
             </button>
-            <div class="product-box-slide">
-              <div class="product-box">
-                <div class="product-box-img">
-                  <img src="images/sec02_img01.png" alt="사진" />
-                </div>
-                <a href="#" class="product-txt">
-                  <span>아이스크림</span>
-                  <span class="hover-txt">view more</span>
-                </a>
-              </div>
-              <div class="product-box">
-                <div class="product-box-img">
-                  <img src="images/sec02_img02.png" alt="사진" />
-                </div>
-                <a href="#" class="product-txt">
-                  <span>우유/치즈</span>
-                  <span class="hover-txt">view more</span>
-                </a>
-              </div>
-              <div class="product-box">
-                <div class="product-box-img">
-                  <img src="images/sec02_img03.png" alt="사진" />
-                </div>
-                <a href="#" class="product-txt">
-                  <span>발효유</span>
-                  <span class="hover-txt">view more</span>
-                </a>
-              </div>
-              <div class="product-box">
-                <div class="product-box-img">
-                  <img src="images/sec02_img04.png" alt="사진" />
-                </div>
-                <a href="#" class="product-txt">
-                  <span>커피</span>
-                  <span class="hover-txt">view more</span>
-                </a>
-              </div>
-              <div class="product-box">
-                <div class="product-box-img">
-                  <img src="images/sec02_img06.png" alt="사진" />
-                </div>
-                <a href="#" class="product-txt">
-                  <span>주스</span>
-                  <span class="hover-txt">view more</span>
-                </a>
-              </div>
-              <div class="product-box">
-                <div class="product-box-img">
-                  <img src="images/sec02_img05.png" alt="사진" />
-                </div>
-                <a href="#" class="product-txt">
-                  <span>음료</span>
-                  <span class="hover-txt">view more</span>
-                </a>
-              </div>
-            </div>
-            <button class="product-slide-next">
-              <img src="images/next_arrow.png" />
+            <button class="product-next-bt">
+              <img src="images/next_arrow.png" alt="다음버튼" />
             </button>
-          </div>
+            <li class="product-box">
+              <a href="#" class="product-img">
+                <img
+                  src="images/sec02_img01.png"
+                  alt="제품사진"
+                  class="pro-img"
+                />
+              </a>
+              <a href="#" class="product-txt">
+                <span class="main-txt">아이스크림</span>
+                <span class="hover-txt">view more</span>
+              </a>
+            </li>
+            <li class="product-box">
+              <a href="#" class="product-img">
+                <img
+                  src="images/sec02_img02.png"
+                  alt="제품사진"
+                  class="pro-img"
+                />
+              </a>
+              <a href="#" class="product-txt">
+                <span class="main-txt">우유/치즈</span>
+                <span class="hover-txt">view more</span>
+              </a>
+            </li>
+            <li class="product-box">
+              <a href="#" class="product-img">
+                <img
+                  src="images/sec02_img03.png"
+                  alt="제품사진"
+                  class="pro-img"
+                />
+              </a>
+              <a href="#" class="product-txt">
+                <span class="main-txt">발효유</span>
+                <span class="hover-txt">view more</span>
+              </a>
+            </li>
+            <li class="product-box">
+              <a href="#" class="product-img">
+                <img
+                  src="images/sec02_img04.png"
+                  alt="제품사진"
+                  class="pro-img"
+                />
+              </a>
+              <a href="#" class="product-txt">
+                <span class="main-txt">커피</span>
+                <span class="hover-txt">view more</span>
+              </a>
+            </li>
+            <li class="product-box">
+              <a href="#" class="product-img">
+                <img
+                  src="images/sec02_img06.png"
+                  alt="제품사진"
+                  class="pro-img"
+                />
+              </a>
+              <a href="#" class="product-txt">
+                <span class="main-txt">주스</span>
+                <span class="hover-txt">view more</span>
+              </a>
+            </li>
+            <li class="product-box">
+              <a href="#" class="product-img">
+                <img
+                  src="images/sec02_img05.png"
+                  alt="제품사진"
+                  class="pro-img"
+                />
+              </a>
+              <a href="#" class="product-txt">
+                <span class="main-txt">음료</span>
+                <span class="hover-txt">view more</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
       <!-- 브랜드 -->

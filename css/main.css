@@ -738,60 +738,77 @@ em {
 
 /* 제품 */
 .product .product-inner {
-  width: 1650px;
+  width: 100%;
+  max-width: 1650px;
+  margin-bottom: 150px;
 }
-.product .product-inner .product-title {
+.product-title {
   font-family: "Binggrae-Bold";
   font-size: 38px;
-  line-height: 40px;
+  line-height: 1.45;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
-.product .product-inner .product-wrap {
+
+.product-slide {
+  position: relative;
   display: flex;
+  width: 100%;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px 0 150px 0;
+  padding: 0 40px;
 }
-.product .product-inner .product-wrap .product-slide-prev {
+.product-slide .product-prev-bt {
   cursor: pointer;
   border: 0;
   background: transparent;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 7px;
+  height: 15px;
 }
-.product .product-inner .product-wrap .product-box-slide {
-  display: flex;
-  justify-content: space-between;
-  gap: 0 18px;
+.product-slide .product-next-bt {
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 15px;
 }
-.product .product-inner .product-wrap .product-box-slide .product-box {
-  width: 242px;
-  height: 297px;
-  overflow: hidden;
+.product-box {
+  display: block;
+  margin: 0 9px;
   transition: transform 1s ease;
 }
-.product .product-inner .product-wrap .product-box-slide .product-box:hover {
+.product-box:hover {
   transform: translateY(-5%);
 }
-.product .product-inner .product-wrap .product-box-slide .product-box:hover .product-txt > span:nth-child(1) {
+.product-box:hover .product-txt > span:nth-child(1) {
   display: none;
 }
-.product .product-inner .product-wrap .product-box-slide .product-box:hover .product-txt > span:nth-child(2) {
+.product-box:hover .hover-txt {
   display: block;
 }
-.product .product-inner .product-wrap .product-box-slide .product-box .product-box-img {
-  width: 242px;
-  height: 242px;
-  position: relative;
+.product-box .product-img {
+  width: 100%;
+  max-width: 242px;
 }
-.product .product-inner .product-wrap .product-box-slide .product-box .product-box-img img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.pro-img {
+  width: 100%;
+  max-width: 242px;
+}
+
+.product-box .product-txt {
+  display: flex;
   width: 100%;
 }
-.product .product-inner .product-wrap .product-box-slide .product-box .product-txt {
-  display: block;
+.main-txt {
+  width: 100%;
+  max-width: 242px;
   height: 43px;
   text-align: center;
   color: #1f1f1f;
@@ -800,29 +817,82 @@ em {
   background: #f9f9f9;
   border-radius: 21px;
   margin: 12px 0 0;
-  cursor: pointer;
 }
+
 .hover-txt {
   display: none;
+  width: 100%;
+  max-width: 242px;
+  height: 43px;
+  line-height: 43px;
+  text-align: center;
   border-radius: 21px;
   color: #fff;
   background: #ed1c24;
   text-transform: uppercase;
   font-size: 16px;
   letter-spacing: 0.1px;
-}
-
-.product .product-inner .product-wrap .product-slide-next {
-  cursor: pointer;
-  border: 0;
-  background: transparent;
-  background: url(../../images/next_arrow.png) no-repeat;
+  margin: 12px 0 0;
 }
 
 @media screen and (max-width: 1700px) {
-  .product-wrap {
+  .product-slide {
     width: 95%;
     margin: 0 auto;
+  }
+}
+@media screen and (max-width: 1399px) {
+  .product-slide {
+    width: 93%;
+  }
+  .product-box {
+    width: 20%;
+  }
+  .product-box:last-child {
+    display: none;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .product-slide {
+    width: 91%;
+  }
+  .product-box {
+    width: 16.6666666667%;
+    max-width: 159px;
+  }
+  .product-box:last-child {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .product-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .product-prev-bt,
+.product-next-bt {
+    display: none;
+  }
+  .product-inner {
+    position: relative;
+    margin-bottom: 0px !important;
+    padding: 0 20px 50px;
+    width: 100%;
+  }
+  .product-slide {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 0;
+  }
+  .product-box {
+    width: 97%;
+    max-width: 235px;
+  }
+  .main-txt {
+    margin: 0;
+    background: none;
+    font-weight: 500;
   }
 }
 /* 브랜드 */
