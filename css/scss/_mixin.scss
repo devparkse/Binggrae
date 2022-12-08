@@ -121,6 +121,11 @@
     inset 0px 4px 10.8px 2.2px rgb(73 73 73 / 11%);
 }
 // 반응형 mixin
+@mixin pc-hover {
+  @media (max-width: 1920px) and (min-width: 1024px) {
+    @content;
+  }
+}
 @mixin pc1 {
   @media (max-width: 1700px) {
     @content;
