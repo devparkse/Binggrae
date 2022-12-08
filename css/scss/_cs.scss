@@ -38,16 +38,10 @@
         }
         .cs-content-left {
           @include cs-content-box;
-          @include mobile {
-            @include mobile-cs-content-box;
-          }
           .email-txt {
             @include cs-content-padding;
             > .email-head {
               @include cs-content-txt;
-              @include mobile {
-                font-size: 18px;
-              }
               display: block;
             }
             > p {
@@ -83,16 +77,13 @@
               display: block;
               @include cs-op-btn;
               @include mobile {
-                display: none;
+                display: none !important;
               }
             }
             &::after {
               @include cs-content-bg;
               background: #eef8fa url(../images/sec04_backimg01.png) no-repeat
                 right / cover;
-              @include tablet2 {
-                @include tablet2-cs-content-bg;
-              }
               @include mobile {
                 background-position: -100px -170px;
               }
@@ -101,17 +92,11 @@
         }
         .cs-content-right {
           @include cs-content-box;
-          @include mobile {
-            @include mobile-cs-content-box;
-          }
           .tell-txt {
             @include cs-content-padding;
             > span:nth-child(1) {
               @include cs-content-txt;
               display: block;
-              @include mobile {
-                font-size: 18px;
-              }
             }
             > span:nth-child(2) {
               display: block;
@@ -149,7 +134,6 @@
               background: #fdf3f2 url(../images/sec04_backimg02.png) no-repeat
                 right / cover;
               @include tablet2 {
-                @include tablet2-cs-content-bg;
                 background-position: -200px 70px;
               }
               @include media-930 {
@@ -163,6 +147,9 @@
               }
               @include mobile {
                 background-position: -100px -200px;
+              }
+              @include media-630 {
+                background-position: -100px -180px;
               }
             }
           }
