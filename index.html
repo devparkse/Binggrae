@@ -122,6 +122,7 @@
       content="images/icon/ms-icon-144x144.png"
     />
     <meta name="theme-color" content="#ffffff" />
+    <title>빙그레</title>
     <!-- jQuery -->
     <script
       src="https://code.jquery.com/jquery-3.6.1.min.js"
@@ -133,11 +134,6 @@
     <![endif]-->
     <script src="js/prefixfree.min.js"></script>
     <script src="js/respond.min.js"></script>
-    <script src="js/script.js" defer></script>
-    <script src="js/sidemenu.js" defer></script>
-    <script src="js/header.js" defer></script>
-    <script src="js/product.js" defer></script>
-    <script src="js/brand.js" defer></script>
 
     <link rel="stylesheet" href="css/normalize.css" />
     <!-- fontello -->
@@ -152,7 +148,27 @@
     />
     <link rel="stylesheet" href="css/font/font.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <title>빙그레</title>
+    <!-- Anime.js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+      integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <script src="js/script.js" defer></script>
+    <script src="js/fixMenu.js" defer></script>
+    <script src="js/sidemenu.js" defer></script>
+    <script src="js/header.js" defer></script>
+    <script src="js/product.js" defer></script>
+    <script src="js/brand.js" defer></script>
   </head>
   <body>
     <!-- 고정메뉴 -->
@@ -443,13 +459,7 @@
       <section class="product">
         <div class="product-inner inner">
           <h2 class="product-title">행복한 빙그레의 맛!</h2>
-          <ul class="product-slide">
-            <button class="product-prev-bt">
-              <img src="images/prev_arrow.png" alt="이전버튼" />
-            </button>
-            <button class="product-next-bt">
-              <img src="images/next_arrow.png" alt="다음버튼" />
-            </button>
+          <ul class="product-slide" id="data-product">
             <li class="product-box">
               <a href="#" class="product-img">
                 <img
@@ -528,6 +538,13 @@
                 <span class="hover-txt">view more</span>
               </a>
             </li>
+
+            <button class="product-prev-bt">
+              <img src="images/prev_arrow.png" alt="이전버튼" />
+            </button>
+            <button class="product-next-bt">
+              <img src="images/next_arrow.png" alt="다음버튼" />
+            </button>
           </ul>
         </div>
       </section>
