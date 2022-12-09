@@ -1,8 +1,11 @@
 .sidemenu {
   position: fixed;
-  display: block;
+  display: none;
   width: 100%;
+  height: 100%;
   z-index: 9999999;
+  background: white url("../images/pc_ham_bg.png") no-repeat right top;
+
   @include tablet2 {
     background: rgba(0, 0, 0, 0.1);
   }
@@ -20,7 +23,7 @@
   }
   .side-wrap {
     height: 100vh;
-    background: #fff;
+
     visibility: visible;
     opacity: 1;
     width: 100%;
@@ -28,6 +31,7 @@
       width: 50%;
       float: right;
       border-top-left-radius: 30px;
+      background: #fff;
     }
     @include mobile {
       width: 90%;
@@ -145,9 +149,9 @@
             right: -20px;
           }
         }
-        &:hover .side-lang-menu {
-          display: block;
-        }
+        // &:hover .side-lang-menu {
+        //   display: block;
+        // }
       }
       .side-lang-menu {
         position: absolute;
@@ -166,8 +170,9 @@
         }
       }
       .side-icon-menu {
-        font-family: fontello;
-        font-size: 28px;
+        background: url("../images/ham.png") no-repeat;
+        color: transparent;
+        cursor: pointer;
       }
     }
     .sidemenu-inner {

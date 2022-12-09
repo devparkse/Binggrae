@@ -84,6 +84,7 @@
               @include cs-content-bg;
               background: #eef8fa url(../images/sec04_backimg01.png) no-repeat
                 right / cover;
+
               @include mobile {
                 background-position: -100px -170px;
               }

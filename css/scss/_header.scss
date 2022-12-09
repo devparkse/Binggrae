@@ -207,7 +207,7 @@
           padding: 10px 0;
           box-shadow: 0px 3px 7px 0 rgb(0 0 0 / 5%);
         }
-        .lang-sort.active{
+        .lang-sort.active {
           display: block;
         }
       }
@@ -215,6 +215,7 @@
         font-family: fontello;
         font-size: 28px;
         float: right;
+        cursor: pointer;
         @include mobile {
           font-size: 25px;
         }

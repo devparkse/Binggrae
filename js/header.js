@@ -16,23 +16,38 @@
   {
     const langBt = document.getElementById("lang-bt");
     const langList = document.getElementById("lang-list");
+    const langBt2 = document.querySelector(".side-lang");
+    const langList2 = document.querySelector(".side-lang-menu");
 
-    // const toggleListArr = [langList];
-    // const toggleBtArr = [langBt];
+    const hamBt = document.querySelector(".icon-menu");
+    const hamSide = document.querySelector(".sidemenu");
 
-    // a 태그 클릭해도 이벤트 전달 막기
-    // toggleListArr.forEach(function (item) {
-    //   item.addEventListener("click", function (event) {
-    //     event.stopPropagation();
-    //   });
-    // });
+    const hamBtClose = document.querySelector(".side-icon-menu");
+    const hamBtCloseMb = document.querySelector(".mo-close");
 
-    langBt.addEventListener("click", function () {
-      if (langList.style.display === "none") {
-        langList.style.display = "block";
-      } else {
-        langList.style.display = "none";
-      }
+    const toggleListArr = [langList, langList2, hamBt];
+    const toggleBtArr = [langBt, langBt2, hamSide];
+
+    function listToggle(toggleBtArr, toggleListArr) {
+      toggleBtArr.addEventListener("click", function (event) {
+        event.stopPropagation();
+        
+        if (toggleListArr.style.display === "none") {
+          toggleListArr.style.display = "block";
+        } else {
+          toggleListArr.style.display = "none";
+        }
+      });
+    }
+    listToggle(langBt, langList);
+    listToggle(langBt2, langList2);
+    listToggle(hamBt, hamSide);
+
+    hamBtClose.addEventListener("click", function () {
+      hamSide.style.display = "none";
+    });
+    hamBtCloseMb.addEventListener("click", function () {
+      hamSide.style.display = "none";
     });
   }
 }
