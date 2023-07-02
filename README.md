@@ -5,10 +5,9 @@
 - html
 - scss
 - javascript
-  
-***
 
 ## :calendar: 개발 기간
 - 2022.11.22 ~ 2022.12.12
 
-##
+## :pushpin: 맡은 기능
+- product, brand 부분
